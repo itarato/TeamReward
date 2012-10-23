@@ -53,8 +53,6 @@
     
     [self.window makeKeyAndVisible];
     
-    [[FBSession activeSession] closeAndClearTokenInformation];
-    
     return YES;
 }
 
@@ -181,50 +179,5 @@
     // For some reason sometimes it ends with 2 or more items in the queue that is also a full finish.
     [self->networkIndicator.view setHidden:YES];
 }
-
-#pragma mark Facebook
-
-- (void)facebookSessionStateChanged:(FBSession *)session
-                              state:(FBSessionState)state
-                              error:(NSError *)error
-                         completion:(TRFacebookCompletionBlock)block {
-    NSLog(@"%s", __FUNCTION__);
-    switch (state) {
-        case FBSessionStateOpen:
-            NSLog(@"FBSessionStateOpen");
-            break;
-        case FBSessionStateClosed:
-        case FBSessionStateClosedLoginFailed:
-            NSLog(@"FBSessionStateClosed/Failed");
-            [[FBSession activeSession] closeAndClearTokenInformation];
-            break;
-        case FBSessionStateOpenTokenExtended:
-            NSLog(@"FBSessionStateOpenTokenExtended");
-            break;
-        default:
-            NSLog(@"FBSession state else");
-            break;
-    }
-    
-    if (error) {
-        NSLog(@"Error: %@", error.localizedDescription);
-    }
-    
-    if (block) {
-        block(state, error);
-    }
-}
-
-- (BOOL)openFacebookSessionWithAllowLoginUI:(BOOL)allowLoginUI withCompletion:(TRFacebookCompletionBlock)block {
-    return [FBSession openActiveSessionWithReadPermissions:nil
-                                              allowLoginUI:allowLoginUI
-                                         completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
-                                             [self facebookSessionStateChanged:session
-                                                                         state:status
-                                                                         error:error
-                                                                    completion:block];
-                                         }];
-}
-
 
 @end

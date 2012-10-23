@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-typedef void (^TRFacebookCompletionBlock)(FBSessionState state, NSError *error);
-
 @class TRNetworkIndicatorViewController;
 
 @interface com_itaratoAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate, RKRequestQueueDelegate> {
@@ -23,14 +21,5 @@ typedef void (^TRFacebookCompletionBlock)(FBSessionState state, NSError *error);
 
 // Makes the necessary networing setup.
 - (void)setUpRestKit;
-
-// Facebook state change handler.
-- (void)facebookSessionStateChanged:(FBSession *)session
-                              state:(FBSessionState)state
-                              error:(NSError *)error
-                         completion:(TRFacebookCompletionBlock)block;
-
-// Action to call the Facebook login and permission provider view.
-- (BOOL)openFacebookSessionWithAllowLoginUI:(BOOL)allowLoginUI withCompletion:(TRFacebookCompletionBlock)block;
 
 @end

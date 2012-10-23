@@ -8,7 +8,11 @@
 #warning "This project uses features only available in iOS SDK 4.0 and later."
 #endif
 
+#define TR_ENVIRONMENT_DEVELOPMENT
+
+#ifdef TR_ENVIRONMENT_DEVELOPMENT
 #define kTRServerBasePath @"http://localhost/teamreward/teamreward/rest"
+#endif
 
 #define kTRServicePathSystemConnect @"/system/connect"
 
