@@ -9,8 +9,8 @@
 #import "TRMyListViewController.h"
 #import "TRNode.h"
 #import "TRRewardTableViewCell.h"
-#import "com_itaratoAppDelegate.h"
 #import "TRRewardFacebookShareViewController.h"
+#import "TRFacebookConnectionManager.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface TRMyListViewController ()
@@ -115,13 +115,14 @@
 - (void)TRRewardTableViewCell:(TRRewardTableViewCell *)withCell DidClickedFacebookOnNode:(TRNode *)node {
     NSLog(@"Here I am. %@", node);
     if (![[FBSession activeSession] isOpen]) {
-        com_itaratoAppDelegate *appDelegate = (com_itaratoAppDelegate *)[[UIApplication sharedApplication] delegate];
-        [appDelegate openFacebookSessionWithAllowLoginUI:YES withCompletion:^(FBSessionState state, NSError *error) {
+        TRFacebookConnectionManager *facebookManager = [TRFacebookConnectionManager sharedManager];
+        [facebookManager setCallback:^(FBSessionState state, NSError *error) {
             NSLog(@"Yay it's back.");
             if (![TRRewardFacebookShareViewController isOpen]) {
                 [TRRewardFacebookShareViewController openSharingViewControllerOn:self withText:@"Hello world"];
             }
         }];
+        [facebookManager openFacebookSessionWithAllowLoginUI:YES];
     }
     else {
         NSLog(@"Already connected to FB.");
