@@ -1,0 +1,838 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47058E5C161E032A001257E4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E5B161E032A001257E4 /* CFNetwork.framework */; };
+		47058E5E161E0330001257E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E5D161E0330001257E4 /* CoreData.framework */; };
+		47058E60161E0337001257E4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E5F161E0337001257E4 /* Security.framework */; };
+		47058E62161E0340001257E4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E61161E0340001257E4 /* MobileCoreServices.framework */; };
+		47058E64161E0346001257E4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E63161E0346001257E4 /* SystemConfiguration.framework */; };
+		47058E66161E034E001257E4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E65161E034E001257E4 /* libxml2.dylib */; };
+		47058E68161E0355001257E4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E67161E0355001257E4 /* QuartzCore.framework */; };
+		47058E69161E0381001257E4 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E47161E009B001257E4 /* libRestKit.a */; };
+		474805D81621C5D50090FA00 /* TRMainTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474805D71621C5D50090FA00 /* TRMainTabBarControllerViewController.m */; };
+		474805DE1621E3190090FA00 /* TRNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 474805DD1621E3190090FA00 /* TRNode.m */; };
+		475BE110162DBF7B0046F298 /* TRRewardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475BE10E162DBF7B0046F298 /* TRRewardDetailViewController.m */; };
+		475BE111162DBF7B0046F298 /* TRRewardDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475BE10F162DBF7B0046F298 /* TRRewardDetailViewController.xib */; };
+		475BE15C162DD4A00046F298 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE15B162DD4A00046F298 /* FacebookSDK.framework */; };
+		475BE15E162DD4ED0046F298 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 475BE15D162DD4ED0046F298 /* FacebookSDKResources.bundle */; };
+		475BE160162DD5750046F298 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE15F162DD5750046F298 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		475BE162162DD5820046F298 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE161162DD5820046F298 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		475BE164162DD58A0046F298 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE163162DD58A0046F298 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		47950F22162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47950F20162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m */; };
+		47950F23162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47950F21162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib */; };
+		47950F26162AE2B8009CBDC5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47950F24162AE2B7009CBDC5 /* AddressBook.framework */; };
+		47950F27162AE2B8009CBDC5 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47950F25162AE2B7009CBDC5 /* AddressBookUI.framework */; };
+		47A5E5381634765200236DAA /* TRRewardFacebookShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5E5361634765200236DAA /* TRRewardFacebookShareViewController.m */; };
+		47A5E5391634765200236DAA /* TRRewardFacebookShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A5E5371634765200236DAA /* TRRewardFacebookShareViewController.xib */; };
+		47B64435161C9AA9000F59FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64434161C9AA9000F59FD /* UIKit.framework */; };
+		47B64437161C9AA9000F59FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64436161C9AA9000F59FD /* Foundation.framework */; };
+		47B64439161C9AA9000F59FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64438161C9AA9000F59FD /* CoreGraphics.framework */; };
+		47B6443F161C9AA9000F59FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47B6443D161C9AA9000F59FD /* InfoPlist.strings */; };
+		47B64441161C9AA9000F59FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B64440161C9AA9000F59FD /* main.m */; };
+		47B64445161C9AA9000F59FD /* com_itaratoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B64444161C9AA9000F59FD /* com_itaratoAppDelegate.m */; };
+		47B64461161C9AA9000F59FD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64460161C9AA9000F59FD /* SenTestingKit.framework */; };
+		47B64462161C9AA9000F59FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64434161C9AA9000F59FD /* UIKit.framework */; };
+		47B64463161C9AA9000F59FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64436161C9AA9000F59FD /* Foundation.framework */; };
+		47B6446B161C9AA9000F59FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47B64469161C9AA9000F59FD /* InfoPlist.strings */; };
+		47B6446E161C9AA9000F59FD /* TeamRewardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B6446D161C9AA9000F59FD /* TeamRewardTests.m */; };
+		47B6447B161C9EFE000F59FD /* TRMyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B64479161C9EFE000F59FD /* TRMyListViewController.m */; };
+		47B6447C161C9EFE000F59FD /* TRMyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B6447A161C9EFE000F59FD /* TRMyListViewController.xib */; };
+		47B64480161C9F3D000F59FD /* TRAddRewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B6447E161C9F3D000F59FD /* TRAddRewardViewController.m */; };
+		47B64481161C9F3D000F59FD /* TRAddRewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B6447F161C9F3D000F59FD /* TRAddRewardViewController.xib */; };
+		47B64485161C9F55000F59FD /* TRHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B64483161C9F55000F59FD /* TRHistoryViewController.m */; };
+		47B64486161C9F55000F59FD /* TRHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B64484161C9F55000F59FD /* TRHistoryViewController.xib */; };
+		47B6448A161CA103000F59FD /* TRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B64488161CA103000F59FD /* TRLoginViewController.m */; };
+		47B6448B161CA103000F59FD /* TRLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B64489161CA103000F59FD /* TRLoginViewController.xib */; };
+		47B6448F161CA190000F59FD /* TRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B6448D161CA190000F59FD /* TRSettingsViewController.m */; };
+		47B64490161CA190000F59FD /* TRSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B6448E161CA190000F59FD /* TRSettingsViewController.xib */; };
+		47B64493161CA262000F59FD /* 108-badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B64492161CA262000F59FD /* 108-badge.png */; };
+		47B64495161CA2A5000F59FD /* 10-medical.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B64494161CA2A5000F59FD /* 10-medical.png */; };
+		47B64497161CA2B0000F59FD /* 44-shoebox.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B64496161CA2B0000F59FD /* 44-shoebox.png */; };
+		47B64499161CA2BC000F59FD /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B64498161CA2BC000F59FD /* 20-gear2.png */; };
+		47C41F301636BCAE004A7FB6 /* TRFacebookConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C41F2F1636BCAE004A7FB6 /* TRFacebookConnectionManager.m */; };
+		47C6F326161F820B00503042 /* TRSystemConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6F325161F820B00503042 /* TRSystemConnect.m */; };
+		47CC43ED1624931300D9DC8A /* TRNodeCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CC43EC1624931300D9DC8A /* TRNodeCreation.m */; };
+		47E5601C161F4EC300B2CCB0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E5601B161F4EC300B2CCB0 /* Default-568h@2x.png */; };
+		47F68253162F1D1100014986 /* TRRewardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F68252162F1D1100014986 /* TRRewardTableViewCell.xib */; };
+		47F68256162F241E00014986 /* TRRewardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F68255162F241E00014986 /* TRRewardTableViewCell.m */; };
+		47F843931620729D0028F1D9 /* TRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F843921620729C0028F1D9 /* TRUser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47058E46161E009B001257E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		47058E48161E009B001257E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		47058E4A161E009B001257E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		47058E4C161E009B001257E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		47058E4E161E009B001257E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
+		};
+		47058E51161E031B001257E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		47058E55161E031B001257E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160E61145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		47058E59161E031B001257E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 259C301515128079003066A2;
+			remoteInfo = RestKitResources;
+		};
+		47B64464161C9AA9000F59FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47B64427161C9AA8000F59FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47B6442F161C9AA9000F59FD;
+			remoteInfo = TeamReward;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47058E3B161E009A001257E4 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "../RestKit-RestKit-d3cad8d/RestKit.xcodeproj"; sourceTree = "<group>"; };
+		47058E5B161E032A001257E4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		47058E5D161E0330001257E4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		47058E5F161E0337001257E4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		47058E61161E0340001257E4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		47058E63161E0346001257E4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		47058E65161E034E001257E4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		47058E67161E0355001257E4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		474805D61621C5D50090FA00 /* TRMainTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMainTabBarControllerViewController.h; sourceTree = "<group>"; };
+		474805D71621C5D50090FA00 /* TRMainTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMainTabBarControllerViewController.m; sourceTree = "<group>"; };
+		474805DC1621E3190090FA00 /* TRNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNode.h; sourceTree = "<group>"; };
+		474805DD1621E3190090FA00 /* TRNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNode.m; sourceTree = "<group>"; };
+		475BE10D162DBF7B0046F298 /* TRRewardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRewardDetailViewController.h; sourceTree = "<group>"; };
+		475BE10E162DBF7B0046F298 /* TRRewardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRewardDetailViewController.m; sourceTree = "<group>"; };
+		475BE10F162DBF7B0046F298 /* TRRewardDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRewardDetailViewController.xib; sourceTree = "<group>"; };
+		475BE15B162DD4A00046F298 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		475BE15D162DD4ED0046F298 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		475BE15F162DD5750046F298 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		475BE161162DD5820046F298 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		475BE163162DD58A0046F298 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		47950F1F162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNetworkIndicatorViewController.h; sourceTree = "<group>"; };
+		47950F20162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNetworkIndicatorViewController.m; sourceTree = "<group>"; };
+		47950F21162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRNetworkIndicatorViewController.xib; sourceTree = "<group>"; };
+		47950F24162AE2B7009CBDC5 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		47950F25162AE2B7009CBDC5 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		47A5E5341634596500236DAA /* TRRewardTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRewardTableViewCellDelegate.h; sourceTree = "<group>"; };
+		47A5E5351634765200236DAA /* TRRewardFacebookShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRewardFacebookShareViewController.h; sourceTree = "<group>"; };
+		47A5E5361634765200236DAA /* TRRewardFacebookShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRewardFacebookShareViewController.m; sourceTree = "<group>"; };
+		47A5E5371634765200236DAA /* TRRewardFacebookShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRewardFacebookShareViewController.xib; sourceTree = "<group>"; };
+		47B64430161C9AA9000F59FD /* TeamReward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamReward.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B64434161C9AA9000F59FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47B64436161C9AA9000F59FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47B64438161C9AA9000F59FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47B6443C161C9AA9000F59FD /* TeamReward-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeamReward-Info.plist"; sourceTree = "<group>"; };
+		47B6443E161C9AA9000F59FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47B64440161C9AA9000F59FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47B64442161C9AA9000F59FD /* TeamReward-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeamReward-Prefix.pch"; sourceTree = "<group>"; };
+		47B64443161C9AA9000F59FD /* com_itaratoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = com_itaratoAppDelegate.h; sourceTree = "<group>"; };
+		47B64444161C9AA9000F59FD /* com_itaratoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_itaratoAppDelegate.m; sourceTree = "<group>"; };
+		47B6445F161C9AA9000F59FD /* TeamRewardTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamRewardTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B64460161C9AA9000F59FD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		47B64468161C9AA9000F59FD /* TeamRewardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeamRewardTests-Info.plist"; sourceTree = "<group>"; };
+		47B6446A161C9AA9000F59FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47B6446C161C9AA9000F59FD /* TeamRewardTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamRewardTests.h; sourceTree = "<group>"; };
+		47B6446D161C9AA9000F59FD /* TeamRewardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamRewardTests.m; sourceTree = "<group>"; };
+		47B64478161C9EFE000F59FD /* TRMyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMyListViewController.h; sourceTree = "<group>"; };
+		47B64479161C9EFE000F59FD /* TRMyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMyListViewController.m; sourceTree = "<group>"; };
+		47B6447A161C9EFE000F59FD /* TRMyListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRMyListViewController.xib; sourceTree = "<group>"; };
+		47B6447D161C9F3D000F59FD /* TRAddRewardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAddRewardViewController.h; sourceTree = "<group>"; };
+		47B6447E161C9F3D000F59FD /* TRAddRewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAddRewardViewController.m; sourceTree = "<group>"; };
+		47B6447F161C9F3D000F59FD /* TRAddRewardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRAddRewardViewController.xib; sourceTree = "<group>"; };
+		47B64482161C9F55000F59FD /* TRHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHistoryViewController.h; sourceTree = "<group>"; };
+		47B64483161C9F55000F59FD /* TRHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHistoryViewController.m; sourceTree = "<group>"; };
+		47B64484161C9F55000F59FD /* TRHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRHistoryViewController.xib; sourceTree = "<group>"; };
+		47B64487161CA103000F59FD /* TRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLoginViewController.h; sourceTree = "<group>"; };
+		47B64488161CA103000F59FD /* TRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLoginViewController.m; sourceTree = "<group>"; };
+		47B64489161CA103000F59FD /* TRLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRLoginViewController.xib; sourceTree = "<group>"; };
+		47B6448C161CA190000F59FD /* TRSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSettingsViewController.h; sourceTree = "<group>"; };
+		47B6448D161CA190000F59FD /* TRSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSettingsViewController.m; sourceTree = "<group>"; };
+		47B6448E161CA190000F59FD /* TRSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRSettingsViewController.xib; sourceTree = "<group>"; };
+		47B64492161CA262000F59FD /* 108-badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "108-badge.png"; sourceTree = "<group>"; };
+		47B64494161CA2A5000F59FD /* 10-medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-medical.png"; sourceTree = "<group>"; };
+		47B64496161CA2B0000F59FD /* 44-shoebox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "44-shoebox.png"; sourceTree = "<group>"; };
+		47B64498161CA2BC000F59FD /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		47C41F2E1636BCAE004A7FB6 /* TRFacebookConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFacebookConnectionManager.h; sourceTree = "<group>"; };
+		47C41F2F1636BCAE004A7FB6 /* TRFacebookConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFacebookConnectionManager.m; sourceTree = "<group>"; };
+		47C6F324161F820B00503042 /* TRSystemConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSystemConnect.h; sourceTree = "<group>"; };
+		47C6F325161F820B00503042 /* TRSystemConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSystemConnect.m; sourceTree = "<group>"; };
+		47CC43EB1624931300D9DC8A /* TRNodeCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNodeCreation.h; sourceTree = "<group>"; };
+		47CC43EC1624931300D9DC8A /* TRNodeCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNodeCreation.m; sourceTree = "<group>"; };
+		47E5601B161F4EC300B2CCB0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		47F68252162F1D1100014986 /* TRRewardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRewardTableViewCell.xib; sourceTree = "<group>"; };
+		47F68254162F241E00014986 /* TRRewardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRewardTableViewCell.h; sourceTree = "<group>"; };
+		47F68255162F241E00014986 /* TRRewardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRewardTableViewCell.m; sourceTree = "<group>"; };
+		47F843911620729C0028F1D9 /* TRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUser.h; sourceTree = "<group>"; };
+		47F843921620729C0028F1D9 /* TRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47B6442D161C9AA9000F59FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475BE164162DD58A0046F298 /* Accounts.framework in Frameworks */,
+				475BE162162DD5820046F298 /* AdSupport.framework in Frameworks */,
+				475BE160162DD5750046F298 /* Social.framework in Frameworks */,
+				47950F26162AE2B8009CBDC5 /* AddressBook.framework in Frameworks */,
+				47950F27162AE2B8009CBDC5 /* AddressBookUI.framework in Frameworks */,
+				47058E68161E0355001257E4 /* QuartzCore.framework in Frameworks */,
+				47058E66161E034E001257E4 /* libxml2.dylib in Frameworks */,
+				47058E64161E0346001257E4 /* SystemConfiguration.framework in Frameworks */,
+				47058E62161E0340001257E4 /* MobileCoreServices.framework in Frameworks */,
+				47058E60161E0337001257E4 /* Security.framework in Frameworks */,
+				47058E5E161E0330001257E4 /* CoreData.framework in Frameworks */,
+				47058E5C161E032A001257E4 /* CFNetwork.framework in Frameworks */,
+				47B64435161C9AA9000F59FD /* UIKit.framework in Frameworks */,
+				47B64437161C9AA9000F59FD /* Foundation.framework in Frameworks */,
+				47B64439161C9AA9000F59FD /* CoreGraphics.framework in Frameworks */,
+				47058E69161E0381001257E4 /* libRestKit.a in Frameworks */,
+				475BE15C162DD4A00046F298 /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B6445B161C9AA9000F59FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B64461161C9AA9000F59FD /* SenTestingKit.framework in Frameworks */,
+				47B64462161C9AA9000F59FD /* UIKit.framework in Frameworks */,
+				47B64463161C9AA9000F59FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47058E3C161E009A001257E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47058E47161E009B001257E4 /* libRestKit.a */,
+				47058E49161E009B001257E4 /* RestKitTests.octest */,
+				47058E4B161E009B001257E4 /* RestKit.framework */,
+				47058E4D161E009B001257E4 /* RestKitFrameworkTests.octest */,
+				47058E4F161E009B001257E4 /* RestKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		474805D91621E2A90090FA00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47C6F324161F820B00503042 /* TRSystemConnect.h */,
+				47C6F325161F820B00503042 /* TRSystemConnect.m */,
+				47F843911620729C0028F1D9 /* TRUser.h */,
+				47F843921620729C0028F1D9 /* TRUser.m */,
+				474805DC1621E3190090FA00 /* TRNode.h */,
+				474805DD1621E3190090FA00 /* TRNode.m */,
+				47CC43EB1624931300D9DC8A /* TRNodeCreation.h */,
+				47CC43EC1624931300D9DC8A /* TRNodeCreation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		474805DA1621E2D10090FA00 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				47B6447F161C9F3D000F59FD /* TRAddRewardViewController.xib */,
+				47B64484161C9F55000F59FD /* TRHistoryViewController.xib */,
+				47B64489161CA103000F59FD /* TRLoginViewController.xib */,
+				47B6447A161C9EFE000F59FD /* TRMyListViewController.xib */,
+				47950F21162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib */,
+				475BE10F162DBF7B0046F298 /* TRRewardDetailViewController.xib */,
+				47A5E5371634765200236DAA /* TRRewardFacebookShareViewController.xib */,
+				47F68252162F1D1100014986 /* TRRewardTableViewCell.xib */,
+				47B6448E161CA190000F59FD /* TRSettingsViewController.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		474805DB1621E2E30090FA00 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47B6447D161C9F3D000F59FD /* TRAddRewardViewController.h */,
+				47B6447E161C9F3D000F59FD /* TRAddRewardViewController.m */,
+				47B64482161C9F55000F59FD /* TRHistoryViewController.h */,
+				47B64483161C9F55000F59FD /* TRHistoryViewController.m */,
+				47B64487161CA103000F59FD /* TRLoginViewController.h */,
+				47B64488161CA103000F59FD /* TRLoginViewController.m */,
+				474805D61621C5D50090FA00 /* TRMainTabBarControllerViewController.h */,
+				474805D71621C5D50090FA00 /* TRMainTabBarControllerViewController.m */,
+				47B64478161C9EFE000F59FD /* TRMyListViewController.h */,
+				47B64479161C9EFE000F59FD /* TRMyListViewController.m */,
+				47950F1F162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.h */,
+				47950F20162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m */,
+				475BE10D162DBF7B0046F298 /* TRRewardDetailViewController.h */,
+				475BE10E162DBF7B0046F298 /* TRRewardDetailViewController.m */,
+				47A5E5351634765200236DAA /* TRRewardFacebookShareViewController.h */,
+				47A5E5361634765200236DAA /* TRRewardFacebookShareViewController.m */,
+				47F68254162F241E00014986 /* TRRewardTableViewCell.h */,
+				47F68255162F241E00014986 /* TRRewardTableViewCell.m */,
+				47B6448C161CA190000F59FD /* TRSettingsViewController.h */,
+				47B6448D161CA190000F59FD /* TRSettingsViewController.m */,
+				47C41F2E1636BCAE004A7FB6 /* TRFacebookConnectionManager.h */,
+				47C41F2F1636BCAE004A7FB6 /* TRFacebookConnectionManager.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		47A5E533163408DF00236DAA /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				47A5E5341634596500236DAA /* TRRewardTableViewCellDelegate.h */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		47B64425161C9AA8000F59FD = {
+			isa = PBXGroup;
+			children = (
+				47E5601B161F4EC300B2CCB0 /* Default-568h@2x.png */,
+				47B64433161C9AA9000F59FD /* Frameworks */,
+				47B64431161C9AA9000F59FD /* Products */,
+				47B6443A161C9AA9000F59FD /* TeamReward */,
+				47B64466161C9AA9000F59FD /* TeamRewardTests */,
+			);
+			sourceTree = "<group>";
+		};
+		47B64431161C9AA9000F59FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47B64430161C9AA9000F59FD /* TeamReward.app */,
+				47B6445F161C9AA9000F59FD /* TeamRewardTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47B64433161C9AA9000F59FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				475BE163162DD58A0046F298 /* Accounts.framework */,
+				47950F24162AE2B7009CBDC5 /* AddressBook.framework */,
+				47950F25162AE2B7009CBDC5 /* AddressBookUI.framework */,
+				475BE161162DD5820046F298 /* AdSupport.framework */,
+				47058E5B161E032A001257E4 /* CFNetwork.framework */,
+				47058E5D161E0330001257E4 /* CoreData.framework */,
+				47B64438161C9AA9000F59FD /* CoreGraphics.framework */,
+				475BE15B162DD4A00046F298 /* FacebookSDK.framework */,
+				475BE15D162DD4ED0046F298 /* FacebookSDKResources.bundle */,
+				47B64436161C9AA9000F59FD /* Foundation.framework */,
+				47058E65161E034E001257E4 /* libxml2.dylib */,
+				47058E61161E0340001257E4 /* MobileCoreServices.framework */,
+				47058E67161E0355001257E4 /* QuartzCore.framework */,
+				47058E3B161E009A001257E4 /* RestKit.xcodeproj */,
+				47058E5F161E0337001257E4 /* Security.framework */,
+				47B64460161C9AA9000F59FD /* SenTestingKit.framework */,
+				475BE15F162DD5750046F298 /* Social.framework */,
+				47058E63161E0346001257E4 /* SystemConfiguration.framework */,
+				47B64434161C9AA9000F59FD /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47B6443A161C9AA9000F59FD /* TeamReward */ = {
+			isa = PBXGroup;
+			children = (
+				47B64443161C9AA9000F59FD /* com_itaratoAppDelegate.h */,
+				47B64444161C9AA9000F59FD /* com_itaratoAppDelegate.m */,
+				474805DB1621E2E30090FA00 /* Controller */,
+				47A5E533163408DF00236DAA /* Delegate */,
+				474805D91621E2A90090FA00 /* Model */,
+				47B64491161CA23A000F59FD /* Resources */,
+				47B6443B161C9AA9000F59FD /* Supporting Files */,
+				474805DA1621E2D10090FA00 /* UI */,
+			);
+			path = TeamReward;
+			sourceTree = "<group>";
+		};
+		47B6443B161C9AA9000F59FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47B6443C161C9AA9000F59FD /* TeamReward-Info.plist */,
+				47B6443D161C9AA9000F59FD /* InfoPlist.strings */,
+				47B64440161C9AA9000F59FD /* main.m */,
+				47B64442161C9AA9000F59FD /* TeamReward-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47B64466161C9AA9000F59FD /* TeamRewardTests */ = {
+			isa = PBXGroup;
+			children = (
+				47B6446C161C9AA9000F59FD /* TeamRewardTests.h */,
+				47B6446D161C9AA9000F59FD /* TeamRewardTests.m */,
+				47B64467161C9AA9000F59FD /* Supporting Files */,
+			);
+			path = TeamRewardTests;
+			sourceTree = "<group>";
+		};
+		47B64467161C9AA9000F59FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47B64468161C9AA9000F59FD /* TeamRewardTests-Info.plist */,
+				47B64469161C9AA9000F59FD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47B64491161CA23A000F59FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47B64498161CA2BC000F59FD /* 20-gear2.png */,
+				47B64496161CA2B0000F59FD /* 44-shoebox.png */,
+				47B64494161CA2A5000F59FD /* 10-medical.png */,
+				47B64492161CA262000F59FD /* 108-badge.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47B6442F161C9AA9000F59FD /* TeamReward */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B64471161C9AA9000F59FD /* Build configuration list for PBXNativeTarget "TeamReward" */;
+			buildPhases = (
+				47B6442C161C9AA9000F59FD /* Sources */,
+				47B6442D161C9AA9000F59FD /* Frameworks */,
+				47B6442E161C9AA9000F59FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47058E52161E031B001257E4 /* PBXTargetDependency */,
+				47058E56161E031B001257E4 /* PBXTargetDependency */,
+				47058E5A161E031B001257E4 /* PBXTargetDependency */,
+			);
+			name = TeamReward;
+			productName = TeamReward;
+			productReference = 47B64430161C9AA9000F59FD /* TeamReward.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47B6445E161C9AA9000F59FD /* TeamRewardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B64474161C9AA9000F59FD /* Build configuration list for PBXNativeTarget "TeamRewardTests" */;
+			buildPhases = (
+				47B6445A161C9AA9000F59FD /* Sources */,
+				47B6445B161C9AA9000F59FD /* Frameworks */,
+				47B6445C161C9AA9000F59FD /* Resources */,
+				47B6445D161C9AA9000F59FD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47B64465161C9AA9000F59FD /* PBXTargetDependency */,
+			);
+			name = TeamRewardTests;
+			productName = TeamRewardTests;
+			productReference = 47B6445F161C9AA9000F59FD /* TeamRewardTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47B64427161C9AA8000F59FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = com.itarato;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Pronovix;
+			};
+			buildConfigurationList = 47B6442A161C9AA8000F59FD /* Build configuration list for PBXProject "TeamReward" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 47B64425161C9AA8000F59FD;
+			productRefGroup = 47B64431161C9AA9000F59FD /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 47058E3C161E009A001257E4 /* Products */;
+					ProjectRef = 47058E3B161E009A001257E4 /* RestKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				47B6442F161C9AA9000F59FD /* TeamReward */,
+				47B6445E161C9AA9000F59FD /* TeamRewardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		47058E47161E009B001257E4 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 47058E46161E009B001257E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47058E49161E009B001257E4 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 47058E48161E009B001257E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47058E4B161E009B001257E4 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 47058E4A161E009B001257E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47058E4D161E009B001257E4 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 47058E4C161E009B001257E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47058E4F161E009B001257E4 /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = 47058E4E161E009B001257E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47B6442E161C9AA9000F59FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B6443F161C9AA9000F59FD /* InfoPlist.strings in Resources */,
+				47B6447C161C9EFE000F59FD /* TRMyListViewController.xib in Resources */,
+				47B64481161C9F3D000F59FD /* TRAddRewardViewController.xib in Resources */,
+				47B64486161C9F55000F59FD /* TRHistoryViewController.xib in Resources */,
+				47B6448B161CA103000F59FD /* TRLoginViewController.xib in Resources */,
+				47B64490161CA190000F59FD /* TRSettingsViewController.xib in Resources */,
+				47B64493161CA262000F59FD /* 108-badge.png in Resources */,
+				47B64495161CA2A5000F59FD /* 10-medical.png in Resources */,
+				47B64497161CA2B0000F59FD /* 44-shoebox.png in Resources */,
+				47B64499161CA2BC000F59FD /* 20-gear2.png in Resources */,
+				47E5601C161F4EC300B2CCB0 /* Default-568h@2x.png in Resources */,
+				47950F23162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib in Resources */,
+				475BE111162DBF7B0046F298 /* TRRewardDetailViewController.xib in Resources */,
+				475BE15E162DD4ED0046F298 /* FacebookSDKResources.bundle in Resources */,
+				47F68253162F1D1100014986 /* TRRewardTableViewCell.xib in Resources */,
+				47A5E5391634765200236DAA /* TRRewardFacebookShareViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B6445C161C9AA9000F59FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B6446B161C9AA9000F59FD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47B6445D161C9AA9000F59FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47B6442C161C9AA9000F59FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B64441161C9AA9000F59FD /* main.m in Sources */,
+				47B64445161C9AA9000F59FD /* com_itaratoAppDelegate.m in Sources */,
+				47B6447B161C9EFE000F59FD /* TRMyListViewController.m in Sources */,
+				47B64480161C9F3D000F59FD /* TRAddRewardViewController.m in Sources */,
+				47B64485161C9F55000F59FD /* TRHistoryViewController.m in Sources */,
+				47B6448A161CA103000F59FD /* TRLoginViewController.m in Sources */,
+				47B6448F161CA190000F59FD /* TRSettingsViewController.m in Sources */,
+				47C6F326161F820B00503042 /* TRSystemConnect.m in Sources */,
+				47F843931620729D0028F1D9 /* TRUser.m in Sources */,
+				474805D81621C5D50090FA00 /* TRMainTabBarControllerViewController.m in Sources */,
+				474805DE1621E3190090FA00 /* TRNode.m in Sources */,
+				47CC43ED1624931300D9DC8A /* TRNodeCreation.m in Sources */,
+				47950F22162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m in Sources */,
+				475BE110162DBF7B0046F298 /* TRRewardDetailViewController.m in Sources */,
+				47F68256162F241E00014986 /* TRRewardTableViewCell.m in Sources */,
+				47A5E5381634765200236DAA /* TRRewardFacebookShareViewController.m in Sources */,
+				47C41F301636BCAE004A7FB6 /* TRFacebookConnectionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B6445A161C9AA9000F59FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B6446E161C9AA9000F59FD /* TeamRewardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47058E52161E031B001257E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 47058E51161E031B001257E4 /* PBXContainerItemProxy */;
+		};
+		47058E56161E031B001257E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKitFramework;
+			targetProxy = 47058E55161E031B001257E4 /* PBXContainerItemProxy */;
+		};
+		47058E5A161E031B001257E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKitResources;
+			targetProxy = 47058E59161E031B001257E4 /* PBXContainerItemProxy */;
+		};
+		47B64465161C9AA9000F59FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47B6442F161C9AA9000F59FD /* TeamReward */;
+			targetProxy = 47B64464161C9AA9000F59FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47B6443D161C9AA9000F59FD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47B6443E161C9AA9000F59FD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		47B64469161C9AA9000F59FD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47B6446A161C9AA9000F59FD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47B6446F161C9AA9000F59FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		47B64470161C9AA9000F59FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47B64472161C9AA9000F59FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../FacebookSDK\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TeamReward/TeamReward-Prefix.pch";
+				INFOPLIST_FILE = "TeamReward/TeamReward-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lsqlite3.0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47B64473161C9AA9000F59FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../FacebookSDK\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TeamReward/TeamReward-Prefix.pch";
+				INFOPLIST_FILE = "TeamReward/TeamReward-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lsqlite3.0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		47B64475161C9AA9000F59FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TeamReward.app/TeamReward";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TeamReward/TeamReward-Prefix.pch";
+				INFOPLIST_FILE = "TeamRewardTests/TeamRewardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		47B64476161C9AA9000F59FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TeamReward.app/TeamReward";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TeamReward/TeamReward-Prefix.pch";
+				INFOPLIST_FILE = "TeamRewardTests/TeamRewardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47B6442A161C9AA8000F59FD /* Build configuration list for PBXProject "TeamReward" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B6446F161C9AA9000F59FD /* Debug */,
+				47B64470161C9AA9000F59FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47B64471161C9AA9000F59FD /* Build configuration list for PBXNativeTarget "TeamReward" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B64472161C9AA9000F59FD /* Debug */,
+				47B64473161C9AA9000F59FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47B64474161C9AA9000F59FD /* Build configuration list for PBXNativeTarget "TeamRewardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B64475161C9AA9000F59FD /* Debug */,
+				47B64476161C9AA9000F59FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47B64427161C9AA8000F59FD /* Project object */;
+}

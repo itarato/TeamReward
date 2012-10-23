@@ -1,0 +1,35 @@
+//
+// Prefix header for all source files of the 'TeamReward' target in the 'TeamReward' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#define kTRServerBasePath @"http://localhost/teamreward/teamreward/rest"
+
+#define kTRServicePathSystemConnect @"/system/connect"
+
+#define kTRServicePathUsers @"/user"
+#define kTRServicePathUser @"/user/:uid"
+#define kTRServicePathUserLogin @"/user/login"
+#define kTRServicePathUserLogout @"/user/logout"
+
+#define kTRServicePathViewsMyRewards @"/views/my_rewards_service"
+#define kTRServicePathViewsMyReceivedRewards @"/views/my_received_rewards_service"
+
+#define kTRServicePathNode @"/node/:nid"
+#define kTRServicePathNodeCreate @"/node"
+
+#define kTRNotificationDataRefresh @"tr_data_refresh"
+
+#define kTRDrupalLanguageUndefined @"und"
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <RestKit/RestKit.h>
+    #import <RestKit/CoreData.h>
+#endif
