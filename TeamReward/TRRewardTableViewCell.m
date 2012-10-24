@@ -13,10 +13,12 @@ static TRRewardTableViewCell *lastSwipedCell = nil;
 
 @implementation TRRewardTableViewCell
 
-@synthesize recipientField;
+@synthesize senderName;
 @synthesize topView;
 @synthesize delegate;
 @synthesize rewardNode;
+@synthesize rewardMessageField;
+@synthesize dateOfRewardField;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];

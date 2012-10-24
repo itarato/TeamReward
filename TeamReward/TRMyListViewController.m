@@ -15,6 +15,8 @@
 
 @interface TRMyListViewController ()
 
+- (void)openShareViewWithNode:(TRNode *)node;
+
 @end
 
 @implementation TRMyListViewController
@@ -77,21 +79,33 @@
     
     // Configure the cell...
     TRNode *node = (TRNode *)[self.rewards objectAtIndex:[indexPath row]];
-    cell.recipientField.text = node.title;
+    cell.senderName.text = node.sender_name ? node.sender_name : node.sender_mail;
+    cell.dateOfRewardField.text = [node shortCreatedDateFormat];
+    cell.rewardMessageField.text = node.title;
     cell.rewardNode = node;
     cell.delegate = self;
     
     return cell;
 }
 
+#pragma mark UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70.0f;
+}
+
 #pragma mark Custom actions
 
 - (void)synchronizeData {
     NSLog(@"%s", __FUNCTION__);
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:kTRServicePathViewsMyRewards usingBlock:^(RKObjectLoader *loader) {
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:kTRServicePathViewsMyReceivedRewards usingBlock:^(RKObjectLoader *loader) {
         loader.method = RKRequestMethodGET;
         loader.delegate = self;
     }];
+}
+
+- (void)openShareViewWithNode:(TRNode *)node {
+    [TRRewardFacebookShareViewController openSharingViewControllerOn:self withText:[NSString stringWithFormat:@"I've got a Thank You! from %@.", node.sender_name ? node.sender_name : node.sender_mail]];
 }
 
 #pragma mark RKObjectLoaderDelegate
@@ -118,17 +132,13 @@
         TRFacebookConnectionManager *facebookManager = [TRFacebookConnectionManager sharedManager];
         [facebookManager setCallback:^(FBSessionState state, NSError *error) {
             NSLog(@"Yay it's back.");
-            if (![TRRewardFacebookShareViewController isOpen]) {
-                [TRRewardFacebookShareViewController openSharingViewControllerOn:self withText:@"Hello world"];
-            }
+            [self openShareViewWithNode:node];
         }];
         [facebookManager openFacebookSessionWithAllowLoginUI:YES];
     }
     else {
         NSLog(@"Already connected to FB.");
-        if (![TRRewardFacebookShareViewController isOpen]) {
-            [TRRewardFacebookShareViewController openSharingViewControllerOn:self withText:@"Hello world"];
-        }
+        [self openShareViewWithNode:node];
     }
 }
 

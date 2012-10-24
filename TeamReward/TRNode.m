@@ -15,9 +15,21 @@
 @synthesize title;
 @synthesize created_at;
 @synthesize status;
+@synthesize sender_mail;
+@synthesize sender_name;
+@synthesize recipient_mail;
+@synthesize recipient_name;
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"TRNode [nid: %d title: %@]", [self.nid intValue], self.title];
+}
+
+- (NSString *)shortCreatedDateFormat {
+    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:self.created_at];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    
+    return [formatter stringFromDate:date];
 }
 
 @end

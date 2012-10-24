@@ -15,5 +15,11 @@
 @property BOOL status;
 @property (nonatomic, retain) NSNumber *authorUid;
 @property NSTimeInterval created_at;
+@property (nonatomic, retain) NSString *sender_name;
+@property (nonatomic, retain) NSString *sender_mail;
+@property (nonatomic, retain) NSString *recipient_name;
+@property (nonatomic, retain) NSString *recipient_mail;
+
+- (NSString *)shortCreatedDateFormat;
 
 @end

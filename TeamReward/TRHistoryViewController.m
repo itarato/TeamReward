@@ -63,11 +63,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
     TRNode *node = [self.history objectAtIndex:[indexPath row]];
     cell.textLabel.text = node.title;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"On %@ to %@.", [node shortCreatedDateFormat], node.recipient_name ? node.recipient_name : node.recipient_mail];
     
     return cell;
 }
@@ -92,7 +93,7 @@
 #pragma mark Custom action
 
 - (void)synchronizeData {
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:kTRServicePathViewsMyReceivedRewards usingBlock:^(RKObjectLoader *loader) {
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:kTRServicePathViewsMyRewards usingBlock:^(RKObjectLoader *loader) {
         loader.method = RKRequestMethodGET;
         loader.delegate = self;
     }];

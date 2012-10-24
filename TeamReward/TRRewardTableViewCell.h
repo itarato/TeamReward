@@ -13,7 +13,9 @@
 
 @interface TRRewardTableViewCell : UITableViewCell
 
-@property (nonatomic, retain) IBOutlet UILabel *recipientField;
+@property (nonatomic, retain) IBOutlet UILabel *senderName;
+@property (nonatomic, retain) IBOutlet UILabel *rewardMessageField;
+@property (nonatomic, retain) IBOutlet UILabel *dateOfRewardField;
 @property (nonatomic, retain) IBOutlet UIView *topView;
 @property (nonatomic, retain) TRNode *rewardNode;
 

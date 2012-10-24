@@ -63,6 +63,8 @@
                          @"language", kTRDrupalLanguageUndefined,
                          nil];
     }];
+    [self.rewardTextField resignFirstResponder];
+    [self.emailField resignFirstResponder];
 }
 
 - (void)onClickAddContact:(id)sender {

@@ -139,6 +139,11 @@
     [nodeMapping mapKeyPathsToAttributes:
      @"nid", @"nid",
      @"title", @"title",
+     @"created", @"created_at",
+     @"tr_reward_sender_mail", @"sender_mail",
+     @"tr_reward_sender_name", @"sender_name",
+     @"tr_reward_recipient_mail", @"recipient_mail",
+     @"tr_reward_recipient_name", @"recipient_name",
      nil];
     [objectManager.mappingProvider addObjectMapping:nodeMapping];
     [objectManager.mappingProvider setSerializationMapping:[nodeMapping inverseMapping] forClass:[TRNode class]];
