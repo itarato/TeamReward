@@ -64,6 +64,13 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        UIFont *fontMain = [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f];
+        UIFont *fontDetail = [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0f];
+        cell.textLabel.font = fontMain;
+        cell.textLabel.textColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
+        cell.detailTextLabel.font = fontDetail;
+        cell.detailTextLabel.textColor = [UIColor colorWithWhite:1.0f alpha:0.6f];
+        cell.contentView.backgroundColor = [UIColor colorWithRed:0.882352941f green:0.231372549f blue:0.192156863f alpha:1.0f];
     }
     
     TRNode *node = [self.history objectAtIndex:[indexPath row]];

@@ -24,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"Add reward";
+        self.title = @"ThankYou";
         [self.tabBarItem setImage:[UIImage imageNamed:@"10-medical.png"]];
     }
     return self;

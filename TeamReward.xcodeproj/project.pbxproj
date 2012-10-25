@@ -17,8 +17,6 @@
 		47058E69161E0381001257E4 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47058E47161E009B001257E4 /* libRestKit.a */; };
 		474805D81621C5D50090FA00 /* TRMainTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474805D71621C5D50090FA00 /* TRMainTabBarControllerViewController.m */; };
 		474805DE1621E3190090FA00 /* TRNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 474805DD1621E3190090FA00 /* TRNode.m */; };
-		475BE110162DBF7B0046F298 /* TRRewardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475BE10E162DBF7B0046F298 /* TRRewardDetailViewController.m */; };
-		475BE111162DBF7B0046F298 /* TRRewardDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475BE10F162DBF7B0046F298 /* TRRewardDetailViewController.xib */; };
 		475BE15C162DD4A00046F298 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE15B162DD4A00046F298 /* FacebookSDK.framework */; };
 		475BE15E162DD4ED0046F298 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 475BE15D162DD4ED0046F298 /* FacebookSDKResources.bundle */; };
 		475BE160162DD5750046F298 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE15F162DD5750046F298 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -143,9 +141,6 @@
 		474805D71621C5D50090FA00 /* TRMainTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMainTabBarControllerViewController.m; sourceTree = "<group>"; };
 		474805DC1621E3190090FA00 /* TRNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNode.h; sourceTree = "<group>"; };
 		474805DD1621E3190090FA00 /* TRNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNode.m; sourceTree = "<group>"; };
-		475BE10D162DBF7B0046F298 /* TRRewardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRewardDetailViewController.h; sourceTree = "<group>"; };
-		475BE10E162DBF7B0046F298 /* TRRewardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRewardDetailViewController.m; sourceTree = "<group>"; };
-		475BE10F162DBF7B0046F298 /* TRRewardDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRewardDetailViewController.xib; sourceTree = "<group>"; };
 		475BE15B162DD4A00046F298 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		475BE15D162DD4ED0046F298 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		475BE15F162DD5750046F298 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -282,7 +277,6 @@
 				47B64489161CA103000F59FD /* TRLoginViewController.xib */,
 				47B6447A161C9EFE000F59FD /* TRMyListViewController.xib */,
 				47950F21162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib */,
-				475BE10F162DBF7B0046F298 /* TRRewardDetailViewController.xib */,
 				47A5E5371634765200236DAA /* TRRewardFacebookShareViewController.xib */,
 				47F68252162F1D1100014986 /* TRRewardTableViewCell.xib */,
 				47B6448E161CA190000F59FD /* TRSettingsViewController.xib */,
@@ -305,8 +299,6 @@
 				47B64479161C9EFE000F59FD /* TRMyListViewController.m */,
 				47950F1F162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.h */,
 				47950F20162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m */,
-				475BE10D162DBF7B0046F298 /* TRRewardDetailViewController.h */,
-				475BE10E162DBF7B0046F298 /* TRRewardDetailViewController.m */,
 				47A5E5351634765200236DAA /* TRRewardFacebookShareViewController.h */,
 				47A5E5361634765200236DAA /* TRRewardFacebookShareViewController.m */,
 				47F68254162F241E00014986 /* TRRewardTableViewCell.h */,
@@ -560,7 +552,6 @@
 				47B64499161CA2BC000F59FD /* 20-gear2.png in Resources */,
 				47E5601C161F4EC300B2CCB0 /* Default-568h@2x.png in Resources */,
 				47950F23162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib in Resources */,
-				475BE111162DBF7B0046F298 /* TRRewardDetailViewController.xib in Resources */,
 				475BE15E162DD4ED0046F298 /* FacebookSDKResources.bundle in Resources */,
 				47F68253162F1D1100014986 /* TRRewardTableViewCell.xib in Resources */,
 				47A5E5391634765200236DAA /* TRRewardFacebookShareViewController.xib in Resources */,
@@ -611,7 +602,6 @@
 				474805DE1621E3190090FA00 /* TRNode.m in Sources */,
 				47CC43ED1624931300D9DC8A /* TRNodeCreation.m in Sources */,
 				47950F22162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m in Sources */,
-				475BE110162DBF7B0046F298 /* TRRewardDetailViewController.m in Sources */,
 				47F68256162F241E00014986 /* TRRewardTableViewCell.m in Sources */,
 				47A5E5381634765200236DAA /* TRRewardFacebookShareViewController.m in Sources */,
 				47C41F301636BCAE004A7FB6 /* TRFacebookConnectionManager.m in Sources */,

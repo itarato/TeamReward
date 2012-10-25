@@ -23,7 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"Profile";
+        self.title = @"Settings";
         [self.tabBarItem setImage:[UIImage imageNamed:@"20-gear2.png"]];
     }
     return self;

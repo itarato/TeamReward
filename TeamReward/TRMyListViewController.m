@@ -29,7 +29,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"My rewards";
+        self.title = @"Mine";
         [self.tabBarItem setImage:[UIImage imageNamed:@"108-badge.png"]];
         
         self.rewards = [[NSMutableArray alloc] init];
@@ -84,6 +84,10 @@
     cell.rewardMessageField.text = node.title;
     cell.rewardNode = node;
     cell.delegate = self;
+    
+    if (indexPath.row & 1) {
+        cell.topView.backgroundColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.1f alpha:1.0f];
+    }
     
     return cell;
 }

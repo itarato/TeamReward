@@ -47,6 +47,10 @@
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<object class="NSColor" key="IBUITintColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC44ODIzNTMwMDc4IDAuMjMxMzcyNTY1IDAuMTkyMTU2ODgxMQA</bytes>
+						</object>
 						<array key="IBUIItems">
 							<object class="IBUINavigationItem" id="229495738">
 								<reference key="IBUINavigationBar" ref="291606906"/>
@@ -88,12 +92,14 @@
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
-							<int key="type">1</int>
-							<double key="pointSize">14</double>
+							<string key="name">HelveticaNeue-Light</string>
+							<string key="family">Helvetica Neue</string>
+							<int key="traits">0</int>
+							<double key="pointSize">17</double>
 						</object>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">14</double>
+							<string key="NSName">HelveticaNeue-Medium</string>
+							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
@@ -103,8 +109,8 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="291606906"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+					<int key="NSColorSpace">2</int>
+					<bytes key="NSRGB">MC44ODIzNTMwMDc4IDAuMjMxMzcyNTY1IDAuMTkyMTU2ODgxMQA</bytes>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
