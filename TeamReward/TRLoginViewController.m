@@ -80,6 +80,8 @@
                          @"password", self->passwordField.text,
                          nil];
     }];
+    [self.passwordField resignFirstResponder];
+    [self.emailField resignFirstResponder];
 }
 
 - (void)handleValidAuthentication:(TRSystemConnect *)systemConnect {

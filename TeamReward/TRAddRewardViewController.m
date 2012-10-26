@@ -33,6 +33,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.emailField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 44)];
+    self.emailField.leftViewMode = UITextFieldViewModeAlways;
+    
+    self.rewardTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 44)];
+    self.rewardTextField.leftViewMode = UITextFieldViewModeAlways;
     // Do any additional setup after loading the view from its nib.
 }
 

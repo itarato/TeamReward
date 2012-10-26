@@ -30,8 +30,6 @@
     TRLoginViewController *loginViewController = [TRLoginViewController sharedLoginViewController];
     [self.view addSubview:loginViewController.view];
     
-    
-    
 	// Do any additional setup after loading the view.
 }
 

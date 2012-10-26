@@ -86,7 +86,7 @@
     cell.delegate = self;
     
     if (indexPath.row & 1) {
-        cell.topView.backgroundColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.1f alpha:1.0f];
+        cell.topView.backgroundColor = [UIColor colorWithRed:252.0f/255.0f green:58.0f/255.0f blue:41.0f/255.0f alpha:1.0f];
     }
     
     return cell;
