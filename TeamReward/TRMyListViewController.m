@@ -42,7 +42,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if (self->_refreshHeaderView == nil) {
+        _refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.table.bounds.size.height, self.view.frame.size.width, self.table.bounds.size.height)];
+        _refreshHeaderView.delegate = self;
+        [self.table addSubview:_refreshHeaderView];
+    }
+    
     // Do any additional setup after loading the view from its nib.
+    [_refreshHeaderView refreshLastUpdatedDate];
 }
 
 - (void)viewDidUnload
@@ -86,7 +94,7 @@
     cell.delegate = self;
     
     if (indexPath.row & 1) {
-        cell.topView.backgroundColor = [UIColor colorWithRed:252.0f/255.0f green:58.0f/255.0f blue:41.0f/255.0f alpha:1.0f];
+//        cell.topView.backgroundColor = [UIColor colorWithRed:252.0f/255.0f green:58.0f/255.0f blue:41.0f/255.0f alpha:1.0f];
     }
     
     return cell;
@@ -102,6 +110,7 @@
 
 - (void)synchronizeData {
     NSLog(@"%s", __FUNCTION__);
+    self->_refreshHeaderIsRefreshing = YES;
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:kTRServicePathViewsMyReceivedRewards usingBlock:^(RKObjectLoader *loader) {
         loader.method = RKRequestMethodGET;
         loader.delegate = self;
@@ -116,16 +125,16 @@
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
     NSLog(@"%s", __FUNCTION__);
+    [self->_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.table];
+    self->_refreshHeaderIsRefreshing = NO;
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
     NSLog(@"%s", __FUNCTION__);
+    self->_refreshHeaderIsRefreshing = NO;
+    [self->_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.table];
     self.rewards = [NSMutableArray arrayWithArray:objects];
     [self.table reloadData];
-}
-
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object {
-    NSLog(@"%s", __FUNCTION__);
 }
 
 #pragma mark TRRewardTableViewCellDelegate
@@ -144,6 +153,30 @@
         NSLog(@"Already connected to FB.");
         [self openShareViewWithNode:node];
     }
+}
+
+#pragma mark EGORefreshTableHeaderDelegate
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView *)view {
+    [self synchronizeData];
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView *)view {
+    return self->_refreshHeaderIsRefreshing;
+}
+
+- (NSDate *)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView *)view {
+    return [NSDate date];
+}
+
+#pragma mark UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self->_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self->_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
 }
 
 @end

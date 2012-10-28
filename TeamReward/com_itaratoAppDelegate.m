@@ -35,13 +35,13 @@
     
     UIViewController *myListViewController = [[TRMyListViewController alloc] initWithNibName:@"TRMyListViewController" bundle:nil];
     UIViewController *addRewardController = [[TRAddRewardViewController alloc] initWithNibName:@"TRAddRewardViewController" bundle:nil];
-    UIViewController *historyViewController = [[TRHistoryViewController alloc] initWithNibName:@"TRHistoryViewController" bundle:nil];
+//    UIViewController *historyViewController = [[TRHistoryViewController alloc] initWithNibName:@"TRHistoryViewController" bundle:nil];
     UIViewController *settingsViewController = [[TRSettingsViewController alloc] initWithNibName:@"TRSettingsViewController" bundle:nil];
     self.tabBarController = [[TRMainTabBarControllerViewController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:
                                              myListViewController,
                                              addRewardController,
-                                             historyViewController,
+//                                             historyViewController,
                                              settingsViewController,
                                              nil];
     

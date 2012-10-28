@@ -33,6 +33,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.nameTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 44)];
+    self.nameTextField.leftViewMode = UITextFieldViewModeAlways;
 }
 
 - (void)viewDidUnload

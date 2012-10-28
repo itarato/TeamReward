@@ -70,7 +70,7 @@
         cell.textLabel.textColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
         cell.detailTextLabel.font = fontDetail;
         cell.detailTextLabel.textColor = [UIColor colorWithWhite:1.0f alpha:0.6f];
-        cell.contentView.backgroundColor = [UIColor colorWithRed:252.0f/255.0f green:58.0f/255.0f blue:41.0f/255.0f alpha:1.0f];
+        cell.contentView.backgroundColor = [UIColor colorWithRed:200.0f/255.0f green:93.0f/255.0f blue:45.0f/255.0f alpha:1.0f];
     }
     
     TRNode *node = [self.history objectAtIndex:[indexPath row]];

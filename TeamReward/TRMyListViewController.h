@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "TRRewardTableViewCellDelegate.h"
+#import "EGORefreshTableHeaderView.h"
 
-@interface TRMyListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, RKObjectLoaderDelegate, TRRewardTableViewCellDelegate>
+@interface TRMyListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, RKObjectLoaderDelegate, TRRewardTableViewCellDelegate, EGORefreshTableHeaderDelegate> {
+    
+    EGORefreshTableHeaderView *_refreshHeaderView;
+    
+    BOOL _refreshHeaderIsRefreshing;
+}
 
 @property (nonatomic, retain) NSMutableArray *rewards;
 @property (nonatomic, retain) IBOutlet UITableView *table;

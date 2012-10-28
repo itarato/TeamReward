@@ -56,6 +56,16 @@
 		47C41F301636BCAE004A7FB6 /* TRFacebookConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C41F2F1636BCAE004A7FB6 /* TRFacebookConnectionManager.m */; };
 		47C6F326161F820B00503042 /* TRSystemConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6F325161F820B00503042 /* TRSystemConnect.m */; };
 		47CC43ED1624931300D9DC8A /* TRNodeCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CC43EC1624931300D9DC8A /* TRNodeCreation.m */; };
+		47DC6512163C03E2003250A5 /* bgr_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6511163C03E2003250A5 /* bgr_1.png */; };
+		47DC652B163C208A003250A5 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DC6521163C208A003250A5 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47DC652C163C208A003250A5 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6523163C208A003250A5 /* blackArrow.png */; };
+		47DC652D163C208A003250A5 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6524163C208A003250A5 /* blackArrow@2x.png */; };
+		47DC652E163C208A003250A5 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6525163C208A003250A5 /* blueArrow.png */; };
+		47DC652F163C208A003250A5 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6526163C208A003250A5 /* blueArrow@2x.png */; };
+		47DC6530163C208A003250A5 /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6527163C208A003250A5 /* grayArrow.png */; };
+		47DC6531163C208A003250A5 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6528163C208A003250A5 /* grayArrow@2x.png */; };
+		47DC6532163C208A003250A5 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6529163C208A003250A5 /* whiteArrow.png */; };
+		47DC6533163C208A003250A5 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC652A163C208A003250A5 /* whiteArrow@2x.png */; };
 		47E5601C161F4EC300B2CCB0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E5601B161F4EC300B2CCB0 /* Default-568h@2x.png */; };
 		47F68253162F1D1100014986 /* TRRewardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F68252162F1D1100014986 /* TRRewardTableViewCell.xib */; };
 		47F68256162F241E00014986 /* TRRewardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F68255162F241E00014986 /* TRRewardTableViewCell.m */; };
@@ -196,6 +206,17 @@
 		47C6F325161F820B00503042 /* TRSystemConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSystemConnect.m; sourceTree = "<group>"; };
 		47CC43EB1624931300D9DC8A /* TRNodeCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNodeCreation.h; sourceTree = "<group>"; };
 		47CC43EC1624931300D9DC8A /* TRNodeCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNodeCreation.m; sourceTree = "<group>"; };
+		47DC6511163C03E2003250A5 /* bgr_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgr_1.png; sourceTree = "<group>"; };
+		47DC6520163C208A003250A5 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		47DC6521163C208A003250A5 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		47DC6523163C208A003250A5 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		47DC6524163C208A003250A5 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		47DC6525163C208A003250A5 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		47DC6526163C208A003250A5 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		47DC6527163C208A003250A5 /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		47DC6528163C208A003250A5 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		47DC6529163C208A003250A5 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		47DC652A163C208A003250A5 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		47E5601B161F4EC300B2CCB0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		47F68252162F1D1100014986 /* TRRewardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRewardTableViewCell.xib; sourceTree = "<group>"; };
 		47F68254162F241E00014986 /* TRRewardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRewardTableViewCell.h; sourceTree = "<group>"; };
@@ -314,6 +335,8 @@
 		47A5E533163408DF00236DAA /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				47B64443161C9AA9000F59FD /* com_itaratoAppDelegate.h */,
+				47B64444161C9AA9000F59FD /* com_itaratoAppDelegate.m */,
 				47A5E5341634596500236DAA /* TRRewardTableViewCellDelegate.h */,
 			);
 			name = Delegate;
@@ -322,10 +345,11 @@
 		47B64425161C9AA8000F59FD = {
 			isa = PBXGroup;
 			children = (
+				47DC651D163C208A003250A5 /* EGOTableViewPullRefresh */,
 				47E5601B161F4EC300B2CCB0 /* Default-568h@2x.png */,
 				47B64433161C9AA9000F59FD /* Frameworks */,
 				47B64431161C9AA9000F59FD /* Products */,
-				47B6443A161C9AA9000F59FD /* TeamReward */,
+				47B6443A161C9AA9000F59FD /* Classes */,
 				47B64466161C9AA9000F59FD /* TeamRewardTests */,
 			);
 			sourceTree = "<group>";
@@ -365,11 +389,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		47B6443A161C9AA9000F59FD /* TeamReward */ = {
+		47B6443A161C9AA9000F59FD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				47B64443161C9AA9000F59FD /* com_itaratoAppDelegate.h */,
-				47B64444161C9AA9000F59FD /* com_itaratoAppDelegate.m */,
 				474805DB1621E2E30090FA00 /* Controller */,
 				47A5E533163408DF00236DAA /* Delegate */,
 				474805D91621E2A90090FA00 /* Model */,
@@ -377,6 +399,7 @@
 				47B6443B161C9AA9000F59FD /* Supporting Files */,
 				474805DA1621E2D10090FA00 /* UI */,
 			);
+			name = Classes;
 			path = TeamReward;
 			sourceTree = "<group>";
 		};
@@ -413,12 +436,54 @@
 		47B64491161CA23A000F59FD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				47DC6511163C03E2003250A5 /* bgr_1.png */,
 				47B64498161CA2BC000F59FD /* 20-gear2.png */,
 				47B64496161CA2B0000F59FD /* 44-shoebox.png */,
 				47B64494161CA2A5000F59FD /* 10-medical.png */,
 				47B64492161CA262000F59FD /* 108-badge.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		47DC651D163C208A003250A5 /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				47DC651E163C208A003250A5 /* Classes */,
+				47DC6522163C208A003250A5 /* Resources */,
+			);
+			path = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		47DC651E163C208A003250A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				47DC651F163C208A003250A5 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		47DC651F163C208A003250A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47DC6520163C208A003250A5 /* EGORefreshTableHeaderView.h */,
+				47DC6521163C208A003250A5 /* EGORefreshTableHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47DC6522163C208A003250A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47DC6523163C208A003250A5 /* blackArrow.png */,
+				47DC6524163C208A003250A5 /* blackArrow@2x.png */,
+				47DC6525163C208A003250A5 /* blueArrow.png */,
+				47DC6526163C208A003250A5 /* blueArrow@2x.png */,
+				47DC6527163C208A003250A5 /* grayArrow.png */,
+				47DC6528163C208A003250A5 /* grayArrow@2x.png */,
+				47DC6529163C208A003250A5 /* whiteArrow.png */,
+				47DC652A163C208A003250A5 /* whiteArrow@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +620,15 @@
 				475BE15E162DD4ED0046F298 /* FacebookSDKResources.bundle in Resources */,
 				47F68253162F1D1100014986 /* TRRewardTableViewCell.xib in Resources */,
 				47A5E5391634765200236DAA /* TRRewardFacebookShareViewController.xib in Resources */,
+				47DC6512163C03E2003250A5 /* bgr_1.png in Resources */,
+				47DC652C163C208A003250A5 /* blackArrow.png in Resources */,
+				47DC652D163C208A003250A5 /* blackArrow@2x.png in Resources */,
+				47DC652E163C208A003250A5 /* blueArrow.png in Resources */,
+				47DC652F163C208A003250A5 /* blueArrow@2x.png in Resources */,
+				47DC6530163C208A003250A5 /* grayArrow.png in Resources */,
+				47DC6531163C208A003250A5 /* grayArrow@2x.png in Resources */,
+				47DC6532163C208A003250A5 /* whiteArrow.png in Resources */,
+				47DC6533163C208A003250A5 /* whiteArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +679,7 @@
 				47F68256162F241E00014986 /* TRRewardTableViewCell.m in Sources */,
 				47A5E5381634765200236DAA /* TRRewardFacebookShareViewController.m in Sources */,
 				47C41F301636BCAE004A7FB6 /* TRFacebookConnectionManager.m in Sources */,
+				47DC652B163C208A003250A5 /* EGORefreshTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +809,7 @@
 					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/itarato/CHECKOUT/EGOTableViewPullRefresh/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -754,6 +830,7 @@
 					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/itarato/CHECKOUT/EGOTableViewPullRefresh/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
