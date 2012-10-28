@@ -98,9 +98,7 @@
     [[RKClient sharedClient] post:kTRServicePathUserLogout params:nil delegate:self];
 }
 
-- (void)onHitDoneKey:(id)sender {
-    
-}
+- (void)onHitDoneKey:(id)sender {}
 
 #pragma mark RKRequestDelegate
 
@@ -123,10 +121,6 @@
         
     }
 }
-
-//- (void)request:(RKRequest *)request didReceiveData:(NSInteger)bytesReceived totalBytesReceived:(NSInteger)totalBytesReceived totalBytesExpectedToReceive:(NSInteger)totalBytesExpectedToReceive {
-//    
-//}
 
 - (void)request:(RKRequest *)request didReceiveResponse:(RKResponse *)response {
     NSLog(@"%s", __FUNCTION__);
