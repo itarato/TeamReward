@@ -10,7 +10,12 @@
 #import "TRSystemConnect.h"
 #import "TRUser.h"
 
+#define kTRLoginAlertButtonRegister 0
+#define kTRLoginAlertButtonTryLogin 1
+
 @interface TRLoginViewController ()
+
+- (void)offerRegistration;
 
 @end
 
@@ -76,8 +81,8 @@
         loader.method = RKRequestMethodPOST;
         loader.delegate = self;
         loader.params = [NSDictionary dictionaryWithKeysAndObjects:
-                         @"username", self->emailField.text,
-                         @"password", self->passwordField.text,
+                         @"username", self.emailField.text,
+                         @"password", self.passwordField.text,
                          nil];
     }];
     [self.passwordField resignFirstResponder];
@@ -99,6 +104,11 @@
 }
 
 - (void)onHitDoneKey:(id)sender {}
+
+- (void)offerRegistration {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration" message:@"Seems you're new. Hit [Register] to create an account. If you already have one, choose [Re-try login]." delegate:self cancelButtonTitle:@"Register" otherButtonTitles:@"Re-try login", nil];
+    [alert show];
+}
 
 #pragma mark RKRequestDelegate
 
@@ -150,6 +160,9 @@
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
     NSLog(@"%s", __FUNCTION__);
+    if ([[objectLoader resourcePath] isEqualToString:kTRServicePathUserLogin]) {
+        [self offerRegistration];
+    }
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object {
@@ -170,6 +183,9 @@
             [self handleValidAuthentication:systemConnect];
         }
     }
+    else if ([objectLoader wasSentToResourcePath:kTRServicePathUserRegister]) {
+        [self checkLoginState];
+    }
 }
 
 #pragma mark Static methods
@@ -187,6 +203,27 @@
 + (void)presentLoginViewControllerOn:(UIViewController *)viewController withActionBlock:(void (^)(TRLoginViewController *))block {
     [[[TRLoginViewController sharedLoginViewController] view] setHidden:NO];
     block([TRLoginViewController sharedLoginViewController]);
+}
+
+#pragma mark UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == kTRLoginAlertButtonRegister) {
+        NSDictionary *params = [NSDictionary dictionaryWithKeysAndObjects:
+                                @"name", self.emailField.text,
+                                @"mail", self.emailField.text,
+                                @"pass", self.passwordField.text,
+                                @"status", [NSNumber numberWithInt:1],
+                                nil];
+        
+        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:kTRServicePathUserRegister
+                                                        usingBlock:^(RKObjectLoader *loader) {
+                                                            loader.method = RKRequestMethodPOST;
+                                                            loader.delegate = self;
+                                                            loader.params = params;
+                                                            loader.additionalHTTPHeaders = [NSDictionary dictionaryWithKeysAndObjects:@"Content-Type", @"application/x-www-form-urlencoded", nil];
+                                                        }];
+    }
 }
 
 @end

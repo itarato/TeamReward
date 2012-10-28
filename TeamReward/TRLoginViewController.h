@@ -10,7 +10,7 @@
 
 @class TRSystemConnect;
 
-@interface TRLoginViewController : UIViewController <RKRequestDelegate, RKObjectLoaderDelegate, UITextFieldDelegate>
+@interface TRLoginViewController : UIViewController <RKRequestDelegate, RKObjectLoaderDelegate, UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UITextField *emailField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordField;

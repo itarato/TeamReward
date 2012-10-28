@@ -21,6 +21,7 @@
 #define kTRServicePathUser @"/user/:uid"
 #define kTRServicePathUserLogin @"/user/login"
 #define kTRServicePathUserLogout @"/user/logout"
+#define kTRServicePathUserRegister @"/user/register"
 
 #define kTRServicePathViewsMyRewards @"/views/my_rewards_service"
 #define kTRServicePathViewsMyReceivedRewards @"/views/my_received_rewards_service"

@@ -19,6 +19,7 @@
 #import "TRNodeCreation.h"
 #import "TRMainTabBarControllerViewController.h"
 #import "TRNetworkIndicatorViewController.h"
+#import "TRUserCreation.h"
 
 @implementation com_itaratoAppDelegate
 
@@ -150,7 +151,7 @@
     [objectManager.mappingProvider setObjectMapping:nodeMapping forResourcePathPattern:kTRServicePathViewsMyRewards];
     [objectManager.mappingProvider setObjectMapping:nodeMapping forResourcePathPattern:kTRServicePathViewsMyReceivedRewards];
     
-    // NodeSuccess mapping.
+    // NodeCreation mapping.
     RKObjectMapping *nodeCreationMapping = [RKObjectMapping mappingForClass:[TRNodeCreation class]];
     [nodeCreationMapping mapKeyPathsToAttributes:
      @"nid", @"nid",
@@ -159,6 +160,15 @@
     [objectManager.mappingProvider addObjectMapping:nodeCreationMapping];
     [objectManager.mappingProvider setSerializationMapping:[nodeCreationMapping inverseMapping] forClass:[TRNodeCreation class]];
     [objectManager.mappingProvider setObjectMapping:nodeCreationMapping forResourcePathPattern:kTRServicePathNodeCreate];
+    
+    // UserCreation mapping.
+    RKObjectMapping *userCreationMapping = [RKObjectMapping mappingForClass:[TRUserCreation class]];
+    [userCreationMapping mapKeyPathsToAttributes:
+     @"uid", @"uid",
+     nil];
+    [objectManager.mappingProvider addObjectMapping:userCreationMapping];
+    [objectManager.mappingProvider setSerializationMapping:[userCreationMapping inverseMapping] forClass:[TRUserCreation class]];
+    [objectManager.mappingProvider setObjectMapping:userCreationMapping forResourcePathPattern:kTRServicePathUserRegister];
     
     // Router for dynamic params.
     RKObjectRouter *router = [[RKObjectRouter alloc] init];

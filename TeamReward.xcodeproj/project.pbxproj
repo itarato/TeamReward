@@ -53,6 +53,7 @@
 		47B64495161CA2A5000F59FD /* 10-medical.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B64494161CA2A5000F59FD /* 10-medical.png */; };
 		47B64497161CA2B0000F59FD /* 44-shoebox.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B64496161CA2B0000F59FD /* 44-shoebox.png */; };
 		47B64499161CA2BC000F59FD /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B64498161CA2BC000F59FD /* 20-gear2.png */; };
+		47B7CB75163D6F5F0003C661 /* TRUserCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B7CB74163D6F5F0003C661 /* TRUserCreation.m */; };
 		47C41F301636BCAE004A7FB6 /* TRFacebookConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C41F2F1636BCAE004A7FB6 /* TRFacebookConnectionManager.m */; };
 		47C6F326161F820B00503042 /* TRSystemConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6F325161F820B00503042 /* TRSystemConnect.m */; };
 		47CC43ED1624931300D9DC8A /* TRNodeCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CC43EC1624931300D9DC8A /* TRNodeCreation.m */; };
@@ -200,6 +201,8 @@
 		47B64494161CA2A5000F59FD /* 10-medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-medical.png"; sourceTree = "<group>"; };
 		47B64496161CA2B0000F59FD /* 44-shoebox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "44-shoebox.png"; sourceTree = "<group>"; };
 		47B64498161CA2BC000F59FD /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		47B7CB73163D6F5F0003C661 /* TRUserCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUserCreation.h; sourceTree = "<group>"; };
+		47B7CB74163D6F5F0003C661 /* TRUserCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUserCreation.m; sourceTree = "<group>"; };
 		47C41F2E1636BCAE004A7FB6 /* TRFacebookConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFacebookConnectionManager.h; sourceTree = "<group>"; };
 		47C41F2F1636BCAE004A7FB6 /* TRFacebookConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFacebookConnectionManager.m; sourceTree = "<group>"; };
 		47C6F324161F820B00503042 /* TRSystemConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSystemConnect.h; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				474805DD1621E3190090FA00 /* TRNode.m */,
 				47CC43EB1624931300D9DC8A /* TRNodeCreation.h */,
 				47CC43EC1624931300D9DC8A /* TRNodeCreation.m */,
+				47B7CB73163D6F5F0003C661 /* TRUserCreation.h */,
+				47B7CB74163D6F5F0003C661 /* TRUserCreation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 				47A5E5381634765200236DAA /* TRRewardFacebookShareViewController.m in Sources */,
 				47C41F301636BCAE004A7FB6 /* TRFacebookConnectionManager.m in Sources */,
 				47DC652B163C208A003250A5 /* EGORefreshTableHeaderView.m in Sources */,
+				47B7CB75163D6F5F0003C661 /* TRUserCreation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
