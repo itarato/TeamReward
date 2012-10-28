@@ -120,7 +120,7 @@
         self.emailField.text = email;
     }
     [self dismissModalViewControllerAnimated:YES];
-    return YES;
+    return NO;
 }
 
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker {
