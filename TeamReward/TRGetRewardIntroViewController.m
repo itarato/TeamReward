@@ -7,6 +7,7 @@
 //
 
 #import "TRGetRewardIntroViewController.h"
+#import "TRRewardFacebookShareViewController.h"
 
 @interface TRGetRewardIntroViewController ()
 
@@ -33,6 +34,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -
+#pragma mark Custom actions
+
+- (void)onClickFacebook:(id)sender {
+    [TRRewardFacebookShareViewController openSharingViewControllerOn:self withText:@"Shareeeee"];
+}
+
+- (void)onClickTwitter:(id)sender {
+    
 }
 
 @end

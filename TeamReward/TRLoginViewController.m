@@ -193,9 +193,10 @@
 + (TRLoginViewController *)sharedLoginViewController {
     static TRLoginViewController *sharedInstance;
     
-    if (sharedInstance == nil) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         sharedInstance = [[TRLoginViewController alloc] initWithNibName:@"TRLoginViewController" bundle:nil];
-    }
+    });
     
     return sharedInstance;
 }

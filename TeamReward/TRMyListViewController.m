@@ -16,6 +16,8 @@
 @interface TRMyListViewController ()
 
 - (void)openShareViewWithNode:(TRNode *)node;
+- (void)showIntroView;
+- (void)hideIntroView;
 
 @end
 
@@ -35,6 +37,8 @@
         self.rewards = [[NSMutableArray alloc] init];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(synchronizeData) name:kTRNotificationDataRefresh object:nil];
+        
+        [self.table setHidden:YES];
     }
     return self;
 }
@@ -93,10 +97,6 @@
     cell.rewardNode = node;
     cell.delegate = self;
     
-    if (indexPath.row & 1) {
-//        cell.topView.backgroundColor = [UIColor colorWithRed:252.0f/255.0f green:58.0f/255.0f blue:41.0f/255.0f alpha:1.0f];
-    }
-    
     return cell;
 }
 
@@ -106,6 +106,7 @@
     return 70.0f;
 }
 
+#pragma mark -
 #pragma mark Custom actions
 
 - (void)synchronizeData {
@@ -121,6 +122,19 @@
     [TRRewardFacebookShareViewController openSharingViewControllerOn:self withText:[NSString stringWithFormat:@"I've got a Thank You! from %@.", node.sender_name ? node.sender_name : node.sender_mail]];
 }
 
+- (void)showIntroView {
+    if (self->getRewardIntroViewController == nil) {
+        self->getRewardIntroViewController = [[TRGetRewardIntroViewController alloc] initWithNibName:@"TRGetRewardIntroViewController" bundle:nil];
+        [self.view addSubview:self->getRewardIntroViewController.view];
+    }
+    
+    [self->getRewardIntroViewController.view setHidden:NO];
+}
+
+- (void)hideIntroView {
+    [self->getRewardIntroViewController.view setHidden:YES];
+}
+
 #pragma mark RKObjectLoaderDelegate
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
@@ -133,8 +147,17 @@
     NSLog(@"%s", __FUNCTION__);
     self->_refreshHeaderIsRefreshing = NO;
     [self->_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.table];
-    self.rewards = [NSMutableArray arrayWithArray:objects];
-    [self.table reloadData];
+    
+    if ([objects count] > 0) {
+        self.rewards = [NSMutableArray arrayWithArray:objects];
+        [self.table reloadData];
+        [self hideIntroView];
+        [self.table setHidden:NO];
+    }
+    else {
+        [self showIntroView];
+        [self.table setHidden:YES];
+    }
 }
 
 #pragma mark TRRewardTableViewCellDelegate

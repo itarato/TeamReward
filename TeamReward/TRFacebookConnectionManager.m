@@ -13,9 +13,10 @@ static TRFacebookConnectionManager *_sharedManager = nil;
 @implementation TRFacebookConnectionManager
 
 + (TRFacebookConnectionManager *)sharedManager {
-    if (_sharedManager == nil) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         _sharedManager = [[TRFacebookConnectionManager alloc] init];
-    }
+    });
     
     return _sharedManager;
 }

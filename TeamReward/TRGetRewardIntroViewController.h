@@ -10,4 +10,7 @@
 
 @interface TRGetRewardIntroViewController : UIViewController
 
+- (IBAction)onClickFacebook:(id)sender;
+- (IBAction)onClickTwitter:(id)sender;
+
 @end
