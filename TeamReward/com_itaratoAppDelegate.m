@@ -52,7 +52,7 @@
     [self->networkIndicator.view setHidden:YES];
     [self.window.rootViewController.view addSubview:self->networkIndicator.view];
     
-    [self.window makeKeyAndVisible];    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

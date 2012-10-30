@@ -163,19 +163,7 @@
 #pragma mark TRRewardTableViewCellDelegate
 
 - (void)TRRewardTableViewCell:(TRRewardTableViewCell *)withCell DidClickedFacebookOnNode:(TRNode *)node {
-    NSLog(@"Here I am. %@", node);
-    if (![[FBSession activeSession] isOpen]) {
-        TRFacebookConnectionManager *facebookManager = [TRFacebookConnectionManager sharedManager];
-        [facebookManager setCallback:^(FBSessionState state, NSError *error) {
-            NSLog(@"Yay it's back.");
-            [self openShareViewWithNode:node];
-        }];
-        [facebookManager openFacebookSessionWithAllowLoginUI:YES];
-    }
-    else {
-        NSLog(@"Already connected to FB.");
-        [self openShareViewWithNode:node];
-    }
+    [self openShareViewWithNode:node];
 }
 
 #pragma mark EGORefreshTableHeaderDelegate

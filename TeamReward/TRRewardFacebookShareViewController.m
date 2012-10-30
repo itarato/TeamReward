@@ -7,13 +7,12 @@
 //
 
 #import "TRRewardFacebookShareViewController.h"
+#import "TRFacebookConnectionManager.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 static TRRewardFacebookShareViewController *sharedInstance = nil;
 
 @interface TRRewardFacebookShareViewController ()
-
-- (void)publishMessage;
 
 @end
 
@@ -60,40 +59,15 @@ static TRRewardFacebookShareViewController *sharedInstance = nil;
 }
 
 - (void)onClickShare:(id)sender {
-    NSLog(@"%s", __FUNCTION__);
-    if ([[[FBSession activeSession] permissions] indexOfObject:@"publish_actions"] == NSNotFound) {
-        [[FBSession activeSession] reauthorizeWithPublishPermissions:[NSArray arrayWithObjects:@"publish_actions", nil]
-                                                     defaultAudience:FBSessionDefaultAudienceEveryone
-                                                   completionHandler:^(FBSession *session, NSError *error) {
-                                                       if (!error) {
-                                                           [self publishMessage];
-                                                       }
-                                                       else {
-                                                           NSLog(@"Publish permission grant error.");
-                                                       }
-                                                   }];
-    }
-    else {
-        [self publishMessage];
-    }
-}
-
-- (void)publishMessage {
-    NSLog(@"%s", __FUNCTION__);
     NSDictionary *params = [NSDictionary dictionaryWithKeysAndObjects:
                             @"link", @"http://itarato.blogspot.com",
                             @"name", @"TeamReward",
                             @"caption", @"I've just received a thank you!",
                             @"description", self.messageTextView.text,
                             nil];
-    
-    [FBRequestConnection
-     startWithGraphPath:@"me/feed"
-     parameters:params
-     HTTPMethod:@"POST"
-     completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-         NSLog(@"Share complete %@.", error ? @"with error" : @"without error");
-     }];
+    [[TRFacebookConnectionManager sharedManager] publishToWall:params withCompletion:^{
+        [[self presentedViewController] dismissModalViewControllerAnimated:YES];
+    }];
 }
 
 @end

@@ -28,6 +28,7 @@
 		47950F27162AE2B8009CBDC5 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47950F25162AE2B7009CBDC5 /* AddressBookUI.framework */; };
 		47A5E5381634765200236DAA /* TRRewardFacebookShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5E5361634765200236DAA /* TRRewardFacebookShareViewController.m */; };
 		47A5E5391634765200236DAA /* TRRewardFacebookShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A5E5371634765200236DAA /* TRRewardFacebookShareViewController.xib */; };
+		47AB7C0A16404B9D00A74FC2 /* TRFacebookActionBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB7C0916404B9D00A74FC2 /* TRFacebookActionBlock.m */; };
 		47B64435161C9AA9000F59FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64434161C9AA9000F59FD /* UIKit.framework */; };
 		47B64437161C9AA9000F59FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64436161C9AA9000F59FD /* Foundation.framework */; };
 		47B64439161C9AA9000F59FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64438161C9AA9000F59FD /* CoreGraphics.framework */; };
@@ -168,6 +169,8 @@
 		47A5E5351634765200236DAA /* TRRewardFacebookShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRewardFacebookShareViewController.h; sourceTree = "<group>"; };
 		47A5E5361634765200236DAA /* TRRewardFacebookShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRewardFacebookShareViewController.m; sourceTree = "<group>"; };
 		47A5E5371634765200236DAA /* TRRewardFacebookShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRewardFacebookShareViewController.xib; sourceTree = "<group>"; };
+		47AB7C0816404B9D00A74FC2 /* TRFacebookActionBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFacebookActionBlock.h; sourceTree = "<group>"; };
+		47AB7C0916404B9D00A74FC2 /* TRFacebookActionBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFacebookActionBlock.m; sourceTree = "<group>"; };
 		47B64430161C9AA9000F59FD /* TeamReward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamReward.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B64434161C9AA9000F59FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		47B64436161C9AA9000F59FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -286,14 +289,16 @@
 		474805D91621E2A90090FA00 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				47C6F324161F820B00503042 /* TRSystemConnect.h */,
-				47C6F325161F820B00503042 /* TRSystemConnect.m */,
-				47F843911620729C0028F1D9 /* TRUser.h */,
-				47F843921620729C0028F1D9 /* TRUser.m */,
+				47AB7C0816404B9D00A74FC2 /* TRFacebookActionBlock.h */,
+				47AB7C0916404B9D00A74FC2 /* TRFacebookActionBlock.m */,
 				474805DC1621E3190090FA00 /* TRNode.h */,
 				474805DD1621E3190090FA00 /* TRNode.m */,
 				47CC43EB1624931300D9DC8A /* TRNodeCreation.h */,
 				47CC43EC1624931300D9DC8A /* TRNodeCreation.m */,
+				47C6F324161F820B00503042 /* TRSystemConnect.h */,
+				47C6F325161F820B00503042 /* TRSystemConnect.m */,
+				47F843911620729C0028F1D9 /* TRUser.h */,
+				47F843921620729C0028F1D9 /* TRUser.m */,
 				47B7CB73163D6F5F0003C661 /* TRUserCreation.h */,
 				47B7CB74163D6F5F0003C661 /* TRUserCreation.m */,
 			);
@@ -321,6 +326,10 @@
 			children = (
 				47B6447D161C9F3D000F59FD /* TRAddRewardViewController.h */,
 				47B6447E161C9F3D000F59FD /* TRAddRewardViewController.m */,
+				47C41F2E1636BCAE004A7FB6 /* TRFacebookConnectionManager.h */,
+				47C41F2F1636BCAE004A7FB6 /* TRFacebookConnectionManager.m */,
+				47B7CB76163DB7E70003C661 /* TRGetRewardIntroViewController.h */,
+				47B7CB77163DB7E70003C661 /* TRGetRewardIntroViewController.m */,
 				47B64482161C9F55000F59FD /* TRHistoryViewController.h */,
 				47B64483161C9F55000F59FD /* TRHistoryViewController.m */,
 				47B64487161CA103000F59FD /* TRLoginViewController.h */,
@@ -337,10 +346,6 @@
 				47F68255162F241E00014986 /* TRRewardTableViewCell.m */,
 				47B6448C161CA190000F59FD /* TRSettingsViewController.h */,
 				47B6448D161CA190000F59FD /* TRSettingsViewController.m */,
-				47C41F2E1636BCAE004A7FB6 /* TRFacebookConnectionManager.h */,
-				47C41F2F1636BCAE004A7FB6 /* TRFacebookConnectionManager.m */,
-				47B7CB76163DB7E70003C661 /* TRGetRewardIntroViewController.h */,
-				47B7CB77163DB7E70003C661 /* TRGetRewardIntroViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -696,6 +701,7 @@
 				47DC652B163C208A003250A5 /* EGORefreshTableHeaderView.m in Sources */,
 				47B7CB75163D6F5F0003C661 /* TRUserCreation.m in Sources */,
 				47B7CB79163DB7E70003C661 /* TRGetRewardIntroViewController.m in Sources */,
+				47AB7C0A16404B9D00A74FC2 /* TRFacebookActionBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

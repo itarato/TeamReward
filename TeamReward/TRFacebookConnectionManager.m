@@ -7,8 +7,23 @@
 //
 
 #import "TRFacebookConnectionManager.h"
+#import "TRFacebookActionBlock.h"
 
 static TRFacebookConnectionManager *_sharedManager = nil;
+
+@interface TRFacebookConnectionManager ()
+
+// Facebook state change handler.
+- (void)facebookSessionStateChanged:(FBSession *)session
+                              state:(FBSessionState)state
+                              error:(NSError *)error;
+
+// Action to call the Facebook login and permission provider view.
+- (BOOL)openFacebookSessionWithAllowLoginUI:(BOOL)allowLoginUI;
+
+- (void)callActionWithWritePermission:(void (^)(void))action;
+
+@end
 
 @implementation TRFacebookConnectionManager
 
@@ -45,18 +60,12 @@ static TRFacebookConnectionManager *_sharedManager = nil;
     if (error) {
         NSLog(@"Error: %@", error.localizedDescription);
     }
-    
-    if (self->callbackBlock != nil) {
-        self->callbackBlock(state, error);
-        self->callbackBlock = nil;
-    }
     else {
-        NSLog(@"ERROR - missing block.");
+        if (self->callback) {
+            self->callback();
+            self->callback = nil;
+        }
     }
-}
-
-- (void)setCallback:(TRFacebookCompletionBlock)block {
-    self->callbackBlock = block;
 }
 
 - (BOOL)openFacebookSessionWithAllowLoginUI:(BOOL)allowLoginUI {
@@ -67,6 +76,42 @@ static TRFacebookConnectionManager *_sharedManager = nil;
                                                                          state:status
                                                                          error:error];
                                          }];
+}
+
+- (void)callActionWithWritePermission:(void (^)(void))action {
+    if ([[[FBSession activeSession] permissions] indexOfObject:@"publish_actions"] == NSNotFound) {
+        [[FBSession activeSession] reauthorizeWithPublishPermissions:[NSArray arrayWithObject:@"publish_actions"]
+                                                     defaultAudience:FBSessionDefaultAudienceEveryone
+                                                   completionHandler:^(FBSession *session, NSError *error) {
+                                                       action();
+                                                   }];
+    }
+    else {
+        action();
+    }
+}
+
+- (void)publishToWall:(NSDictionary *)params withCompletion:(void (^)(void))block {
+    void (^pushActionBlock)(void) = ^{
+        [FBRequestConnection
+         startWithGraphPath:@"me/feed"
+         parameters:params
+         HTTPMethod:@"POST"
+         completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+             block();
+         }];
+    };
+    
+    if ([[FBSession activeSession] isOpen]) {
+        [self callActionWithWritePermission:pushActionBlock];
+    }
+    else {
+        TRFacebookConnectionManager *facebookManager = self;
+        self->callback = ^{
+            [facebookManager callActionWithWritePermission:pushActionBlock];
+        };
+        [self openFacebookSessionWithAllowLoginUI:YES];
+    }
 }
 
 @end

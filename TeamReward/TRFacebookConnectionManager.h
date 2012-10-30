@@ -9,21 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-typedef void (^TRFacebookCompletionBlock)(FBSessionState state, NSError *error);
+@class TRFacebookActionBlock;
+
+#define kTRFacebookMessageLink          @"link"
+#define kTRFacebookMessageName          @"name"
+#define kTRFacebookMessageCaption       @"caption"
+#define kTRFacebookMessageDescription   @"description"
 
 @interface TRFacebookConnectionManager : NSObject {
-    TRFacebookCompletionBlock callbackBlock;
+//    TRFacebookActionBlock *actionToCall;
+    void (^callback)(void);
 }
 
-- (void)setCallback:(TRFacebookCompletionBlock)block;
-
-// Facebook state change handler.
-- (void)facebookSessionStateChanged:(FBSession *)session
-                              state:(FBSessionState)state
-                              error:(NSError *)error;
-
-// Action to call the Facebook login and permission provider view.
-- (BOOL)openFacebookSessionWithAllowLoginUI:(BOOL)allowLoginUI;
+- (void)publishToWall:(NSDictionary *)params withCompletion:(void(^)(void))block;
 
 // Singleton instance.
 + (TRFacebookConnectionManager *)sharedManager;
