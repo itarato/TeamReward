@@ -12,7 +12,9 @@
 
 #ifdef TR_ENVIRONMENT_DEVELOPMENT
 //#define kTRServerBasePath @"http://localhost/teamreward/teamreward/rest"
-#define kTRServerBasePath @"http://192.168.1.15/teamreward/teamreward/rest"
+#define kTRServerBasePath @"http://192.168.1.102/teamreward/teamreward/rest"
+#elif
+#define kTRServerBasePath @"http://???/teamreward/teamreward/rest"
 #endif
 
 #define kTRServicePathSystemConnect @"/system/connect"

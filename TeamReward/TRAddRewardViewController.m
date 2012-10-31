@@ -49,11 +49,6 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 #pragma mark Custom actions
 
 - (void)onClickSend:(id)sender {
@@ -80,9 +75,7 @@
     [self presentModalViewController:picker animated:YES];
 }
 
-- (void)onHitDoneKey:(id)sender {
-    
-}
+- (void)onHitDoneKey:(id)sender {}
 
 #pragma mark RKObjectLoaderDelegate
 
