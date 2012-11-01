@@ -22,6 +22,7 @@
 @property (nonatomic, retain) id <TRRewardTableViewCellDelegate> delegate;
 
 - (IBAction)onClickFacebookShare:(id)sender;
+- (IBAction)onClickTwitterShare:(id)sender;
 - (void)onSwipe;
 - (void)onSwipeBack;
 

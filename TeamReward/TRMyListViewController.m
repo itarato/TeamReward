@@ -12,6 +12,7 @@
 #import "TRRewardFacebookShareViewController.h"
 #import "TRFacebookConnectionManager.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <Twitter/Twitter.h>
 
 @interface TRMyListViewController ()
 
@@ -164,6 +165,11 @@
 
 - (void)TRRewardTableViewCell:(TRRewardTableViewCell *)withCell DidClickedFacebookOnNode:(TRNode *)node {
     [self openShareViewWithNode:node];
+}
+
+- (void)TRRewardTableViewCell:(TRRewardTableViewCell *)withCell DidClickedTwitterOnNode:(TRNode *)node {
+    TWTweetComposeViewController *twitterController = [[TWTweetComposeViewController alloc] init];
+    [self presentModalViewController:twitterController animated:YES];
 }
 
 #pragma mark EGORefreshTableHeaderDelegate

@@ -50,6 +50,12 @@ static TRRewardTableViewCell *lastSwipedCell = nil;
     }
 }
 
+- (void)onClickTwitterShare:(id)sender {
+    if (self->delegate != nil && [self->delegate respondsToSelector:@selector(TRRewardTableViewCell:DidClickedTwitterOnNode:)]) {
+        [self->delegate TRRewardTableViewCell:self DidClickedTwitterOnNode:rewardNode];
+    }
+}
+
 - (void)onSwipe {
     if (lastSwipedCell != nil && lastSwipedCell != self) {
         [lastSwipedCell onSwipeBack];

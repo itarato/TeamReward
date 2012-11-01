@@ -16,5 +16,6 @@
 @optional
 
 - (void)TRRewardTableViewCell:(TRRewardTableViewCell *)withCell DidClickedFacebookOnNode:(TRNode *)node;
+- (void)TRRewardTableViewCell:(TRRewardTableViewCell *)withCell DidClickedTwitterOnNode:(TRNode *)node;
 
 @end
