@@ -8,6 +8,7 @@
 
 #import "TRGetRewardIntroViewController.h"
 #import "TRRewardFacebookShareViewController.h"
+#import <Twitter/Twitter.h>
 
 @interface TRGetRewardIntroViewController ()
 
@@ -44,7 +45,8 @@
 }
 
 - (void)onClickTwitter:(id)sender {
-    
+    TWTweetComposeViewController *twitterController = [[TWTweetComposeViewController alloc] init];
+    [self presentModalViewController:twitterController animated:YES];
 }
 
 @end

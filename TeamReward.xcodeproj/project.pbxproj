@@ -22,6 +22,7 @@
 		475BE160162DD5750046F298 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE15F162DD5750046F298 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		475BE162162DD5820046F298 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE161162DD5820046F298 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		475BE164162DD58A0046F298 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475BE163162DD58A0046F298 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4772AE521641D71D00DCCF66 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4772AE511641D71D00DCCF66 /* Twitter.framework */; };
 		47950F22162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47950F20162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m */; };
 		47950F23162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47950F21162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib */; };
 		47950F26162AE2B8009CBDC5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47950F24162AE2B7009CBDC5 /* AddressBook.framework */; };
@@ -160,6 +161,7 @@
 		475BE15F162DD5750046F298 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		475BE161162DD5820046F298 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		475BE163162DD58A0046F298 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		4772AE511641D71D00DCCF66 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		47950F1F162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNetworkIndicatorViewController.h; sourceTree = "<group>"; };
 		47950F20162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNetworkIndicatorViewController.m; sourceTree = "<group>"; };
 		47950F21162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRNetworkIndicatorViewController.xib; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4772AE521641D71D00DCCF66 /* Twitter.framework in Frameworks */,
 				475BE164162DD58A0046F298 /* Accounts.framework in Frameworks */,
 				475BE162162DD5820046F298 /* AdSupport.framework in Frameworks */,
 				475BE160162DD5750046F298 /* Social.framework in Frameworks */,
@@ -363,6 +366,7 @@
 		47B64425161C9AA8000F59FD = {
 			isa = PBXGroup;
 			children = (
+				4772AE511641D71D00DCCF66 /* Twitter.framework */,
 				47DC651D163C208A003250A5 /* EGOTableViewPullRefresh */,
 				47E5601B161F4EC300B2CCB0 /* Default-568h@2x.png */,
 				47B64433161C9AA9000F59FD /* Frameworks */,
