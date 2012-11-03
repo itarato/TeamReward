@@ -12,7 +12,9 @@
 @interface TRAddRewardViewController : UIViewController <RKObjectLoaderDelegate, UITextFieldDelegate, ABPeoplePickerNavigationControllerDelegate>
 
 @property (nonatomic, retain) IBOutlet UITextField *emailField;
-@property (nonatomic, retain) IBOutlet UITextField *rewardTextField;
+@property (nonatomic, retain) IBOutlet UITextView *rewardTextField;
+@property (nonatomic, retain) IBOutlet UIButton *contactsButton;
+@property (nonatomic, retain) IBOutlet UIButton *sendButton;
 
 - (IBAction)onClickSend:(id)sender;
 - (IBAction)onClickAddContact:(id)sender;

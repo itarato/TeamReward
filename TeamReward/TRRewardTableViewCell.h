@@ -14,10 +14,12 @@
 @interface TRRewardTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UILabel *senderName;
-@property (nonatomic, retain) IBOutlet UILabel *rewardMessageField;
+@property (nonatomic, retain) IBOutlet UITextView *rewardMessageField;
 @property (nonatomic, retain) IBOutlet UILabel *dateOfRewardField;
 @property (nonatomic, retain) IBOutlet UIView *topView;
 @property (nonatomic, retain) TRNode *rewardNode;
+@property (nonatomic, retain) IBOutlet UIButton *facebookButton;
+@property (nonatomic, retain) IBOutlet UIButton *twitterButton;
 
 @property (nonatomic, retain) id <TRRewardTableViewCellDelegate> delegate;
 

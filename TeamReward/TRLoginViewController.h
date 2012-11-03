@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *emailField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordField;
+@property (nonatomic, retain) IBOutlet UIButton *loginButton;
 
 - (void)checkLoginState;
 - (IBAction)onClickLogin:(id)sender;

@@ -11,8 +11,10 @@
 #import "TRRewardTableViewCell.h"
 #import "TRRewardFacebookShareViewController.h"
 #import "TRFacebookConnectionManager.h"
+#import "UIColor+TRColorAddition.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <Twitter/Twitter.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface TRMyListViewController ()
 
@@ -54,6 +56,8 @@
         [self.table addSubview:_refreshHeaderView];
     }
     
+    [self.view setBackgroundColor:[UIColor underPageBackgroundColor]];
+    
     // Do any additional setup after loading the view from its nib.
     [_refreshHeaderView refreshLastUpdatedDate];
 }
@@ -85,6 +89,13 @@
         for (id item in nibObjects) {
             if ([item isKindOfClass:[TRRewardTableViewCell class]]) {
                 cell = (TRRewardTableViewCell *)item;
+//                [cell.topView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_bgr.png"]]];
+                cell.facebookButton.layer.borderWidth = 1.0f;
+                cell.facebookButton.layer.borderColor = [[UIColor colorWith255Red:59 green:89 blue:152 darkened:0.6f] CGColor];
+                cell.facebookButton.layer.cornerRadius = 3.0f;
+                cell.twitterButton.layer.borderWidth = 1.0f;
+                cell.twitterButton.layer.borderColor = [[UIColor colorWith255Red:192 green:222 blue:237 darkened:0.4f] CGColor];
+                cell.twitterButton.layer.cornerRadius = 3.0f;
                 break;
             }
         }
@@ -104,7 +115,7 @@
 #pragma mark UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70.0f;
+    return 180.0f;
 }
 
 #pragma mark -

@@ -40,8 +40,8 @@
     UIViewController *settingsViewController = [[TRSettingsViewController alloc] initWithNibName:@"TRSettingsViewController" bundle:nil];
     self.tabBarController = [[TRMainTabBarControllerViewController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:
-                                             myListViewController,
                                              addRewardController,
+                                             myListViewController,
 //                                             historyViewController,
                                              settingsViewController,
                                              nil];

@@ -30,6 +30,9 @@
     TRLoginViewController *loginViewController = [TRLoginViewController sharedLoginViewController];
     [self.view addSubview:loginViewController.view];
     
+//    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"tab_bgr.png"]];
+    [self.view setBackgroundColor:[UIColor clearColor]];
+    
 	// Do any additional setup after loading the view.
 }
 

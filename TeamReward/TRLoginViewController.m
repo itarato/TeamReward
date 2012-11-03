@@ -9,6 +9,7 @@
 #import "TRLoginViewController.h"
 #import "TRSystemConnect.h"
 #import "TRUser.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define kTRLoginAlertButtonRegister 0
 #define kTRLoginAlertButtonTryLogin 1
@@ -23,6 +24,7 @@
 
 @synthesize emailField;
 @synthesize passwordField;
+@synthesize loginButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,13 +43,7 @@
     CGPoint selfPos = self.view.center;
     selfPos.y += 20;
     self.view.center = selfPos;
-    
-    self.emailField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 42)];
-    self.emailField.leftViewMode = UITextFieldViewModeAlways;
-    
-    self.passwordField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 42)];
-    self.passwordField.leftViewMode = UITextFieldViewModeAlways;
-    
+
     [self checkLoginState];
     // Do any additional setup after loading the view from its nib.
 }

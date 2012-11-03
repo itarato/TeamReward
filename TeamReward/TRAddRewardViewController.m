@@ -9,6 +9,7 @@
 #import "TRAddRewardViewController.h"
 #import "TRUser.h"
 #import <AddressBookUI/AddressBookUI.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface TRAddRewardViewController ()
 
@@ -18,6 +19,8 @@
 
 @synthesize rewardTextField;
 @synthesize emailField;
+@synthesize sendButton;
+@synthesize contactsButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,12 +36,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.emailField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 44)];
-    self.emailField.leftViewMode = UITextFieldViewModeAlways;
     
-    self.rewardTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 44)];
-    self.rewardTextField.leftViewMode = UITextFieldViewModeAlways;
+    UIImage *buttonImg = [UIImage imageNamed:@"btn.png"];
+    UIImage *buttonBgr = [buttonImg stretchableImageWithLeftCapWidth:4 topCapHeight:4];
+    [self.sendButton setBackgroundImage:buttonBgr forState:UIControlStateNormal];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
