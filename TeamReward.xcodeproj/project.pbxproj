@@ -28,6 +28,8 @@
 		47150BAB164565C600FFCB2A /* bgr.png in Resources */ = {isa = PBXBuildFile; fileRef = 47150BA9164565C600FFCB2A /* bgr.png */; };
 		47150BAE16456F9E00FFCB2A /* spread@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47150BAC16456F9E00FFCB2A /* spread@2x.png */; };
 		47150BAF16456F9E00FFCB2A /* spread.png in Resources */ = {isa = PBXBuildFile; fileRef = 47150BAD16456F9E00FFCB2A /* spread.png */; };
+		47150BB316459B2A00FFCB2A /* TRShareAddingRewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47150BB116459B2A00FFCB2A /* TRShareAddingRewardViewController.m */; };
+		47150BB416459B2A00FFCB2A /* TRShareAddingRewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47150BB216459B2A00FFCB2A /* TRShareAddingRewardViewController.xib */; };
 		47411F971643FD30007BBB4A /* btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 47411F961643FD30007BBB4A /* btn.png */; };
 		474805D81621C5D50090FA00 /* TRMainTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474805D71621C5D50090FA00 /* TRMainTabBarControllerViewController.m */; };
 		474805DE1621E3190090FA00 /* TRNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 474805DD1621E3190090FA00 /* TRNode.m */; };
@@ -179,6 +181,10 @@
 		47150BA9164565C600FFCB2A /* bgr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bgr.png; path = ../../../../Desktop/bgr.png; sourceTree = "<group>"; };
 		47150BAC16456F9E00FFCB2A /* spread@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spread@2x.png"; path = "../../../../Desktop/spread@2x.png"; sourceTree = "<group>"; };
 		47150BAD16456F9E00FFCB2A /* spread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spread.png; path = ../../../../Desktop/spread.png; sourceTree = "<group>"; };
+		47150BB016459B2A00FFCB2A /* TRShareAddingRewardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRShareAddingRewardViewController.h; sourceTree = "<group>"; };
+		47150BB116459B2A00FFCB2A /* TRShareAddingRewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRShareAddingRewardViewController.m; sourceTree = "<group>"; };
+		47150BB216459B2A00FFCB2A /* TRShareAddingRewardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRShareAddingRewardViewController.xib; sourceTree = "<group>"; };
+		47150BB516459C9E00FFCB2A /* TRShareAddingRewardDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRShareAddingRewardDelegate.h; sourceTree = "<group>"; };
 		47411F961643FD30007BBB4A /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn.png; path = ../../../../Desktop/btn.png; sourceTree = "<group>"; };
 		474805D61621C5D50090FA00 /* TRMainTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMainTabBarControllerViewController.h; sourceTree = "<group>"; };
 		474805D71621C5D50090FA00 /* TRMainTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMainTabBarControllerViewController.m; sourceTree = "<group>"; };
@@ -340,6 +346,7 @@
 		474805DA1621E2D10090FA00 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				47150BB216459B2A00FFCB2A /* TRShareAddingRewardViewController.xib */,
 				47B7CB78163DB7E70003C661 /* TRGetRewardIntroViewController.xib */,
 				47B6447F161C9F3D000F59FD /* TRAddRewardViewController.xib */,
 				47B64484161C9F55000F59FD /* TRHistoryViewController.xib */,
@@ -378,6 +385,8 @@
 				47F68255162F241E00014986 /* TRRewardTableViewCell.m */,
 				47B6448C161CA190000F59FD /* TRSettingsViewController.h */,
 				47B6448D161CA190000F59FD /* TRSettingsViewController.m */,
+				47150BB016459B2A00FFCB2A /* TRShareAddingRewardViewController.h */,
+				47150BB116459B2A00FFCB2A /* TRShareAddingRewardViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -397,6 +406,7 @@
 				47B64443161C9AA9000F59FD /* com_itaratoAppDelegate.h */,
 				47B64444161C9AA9000F59FD /* com_itaratoAppDelegate.m */,
 				47A5E5341634596500236DAA /* TRRewardTableViewCellDelegate.h */,
+				47150BB516459C9E00FFCB2A /* TRShareAddingRewardDelegate.h */,
 			);
 			name = Delegate;
 			sourceTree = "<group>";
@@ -717,6 +727,7 @@
 				47150BAB164565C600FFCB2A /* bgr.png in Resources */,
 				47150BAE16456F9E00FFCB2A /* spread@2x.png in Resources */,
 				47150BAF16456F9E00FFCB2A /* spread.png in Resources */,
+				47150BB416459B2A00FFCB2A /* TRShareAddingRewardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +783,7 @@
 				47B7CB79163DB7E70003C661 /* TRGetRewardIntroViewController.m in Sources */,
 				47AB7C0A16404B9D00A74FC2 /* TRFacebookActionBlock.m in Sources */,
 				4771E6AC1642CF16002322A3 /* UIColor+TRColorAddition.m in Sources */,
+				47150BB316459B2A00FFCB2A /* TRShareAddingRewardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <AddressBookUI/ABPeoplePickerNavigationController.h>
+#import "TRShareAddingRewardViewController.h"
+#import "TRShareAddingRewardDelegate.h"
 
-@interface TRAddRewardViewController : UIViewController <RKObjectLoaderDelegate, UITextFieldDelegate, ABPeoplePickerNavigationControllerDelegate>
+@interface TRAddRewardViewController : UIViewController <RKObjectLoaderDelegate, UITextFieldDelegate, ABPeoplePickerNavigationControllerDelegate, TRShareAddingRewardDelegate> {
+    
+    TRShareAddingRewardViewController *shareViewController;
+    
+}
 
 @property (nonatomic, retain) IBOutlet UITextField *emailField;
 @property (nonatomic, retain) IBOutlet UITextView *rewardTextField;

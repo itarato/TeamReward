@@ -92,6 +92,12 @@
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object {
     NSLog(@"%s", __FUNCTION__);
     [[NSNotificationCenter defaultCenter] postNotificationName:kTRNotificationDataRefresh object:nil];
+    
+    if (self->shareViewController == nil) {
+        self->shareViewController = [[TRShareAddingRewardViewController alloc] initWithNibName:@"TRShareAddingRewardViewController" bundle:nil];
+    }
+    
+    [self presentModalViewController:self->shareViewController animated:YES];
 }
 
 #pragma mark ABPeoplePickerNavigationControllerDelegate
@@ -121,6 +127,17 @@
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker {
     NSLog(@"%s", __FUNCTION__);
     [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - 
+#pragma mark TRShareAddingRewardDelegate
+
+- (void)shareAddingRewardDidHitFacebook {
+    
+}
+
+- (void)shareAddingRewardDidHitTwitter {
+    
 }
 
 @end
