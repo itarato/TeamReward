@@ -11,7 +11,7 @@
 #import "TRShareAddingRewardViewController.h"
 #import "TRShareAddingRewardDelegate.h"
 
-@interface TRAddRewardViewController : UIViewController <RKObjectLoaderDelegate, UITextFieldDelegate, ABPeoplePickerNavigationControllerDelegate, TRShareAddingRewardDelegate> {
+@interface TRAddRewardViewController : UIViewController <RKObjectLoaderDelegate, UITextFieldDelegate, ABPeoplePickerNavigationControllerDelegate, TRShareAddingRewardDelegate, UITextViewDelegate> {
     
     TRShareAddingRewardViewController *shareViewController;
     

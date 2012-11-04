@@ -14,5 +14,6 @@
 
 - (void)shareAddingRewardDidHitTwitter;
 - (void)shareAddingRewardDidHitFacebook;
+- (void)shareAddingRewardDidHitClose;
 
 @end

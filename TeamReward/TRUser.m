@@ -8,6 +8,8 @@
 
 #import "TRUser.h"
 
+#define kTRUserUndefined -1
+
 TRUser *_activeUser = nil;
 
 @implementation TRUser
@@ -15,6 +17,17 @@ TRUser *_activeUser = nil;
 @synthesize uid;
 @synthesize mail;
 @synthesize name;
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.name = @"";
+        self.mail = @"";
+        self.uid = [NSNumber numberWithInt: kTRUserUndefined];
+    }
+    
+    return self;
+}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"TRUser [uid: %d mail: %@ name: %@]", [self->uid intValue], self->mail, self->name];

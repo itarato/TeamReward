@@ -41,7 +41,12 @@
 #pragma mark Custom actions
 
 - (void)onClickCancel:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(shareAddingRewardDidHitClose)]) {
+        [self.delegate shareAddingRewardDidHitClose];
+    }
+    else {
+        [self.view setHidden:YES];
+    }
 }
 
 - (void)onClickFacebook:(id)sender {

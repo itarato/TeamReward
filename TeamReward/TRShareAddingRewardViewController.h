@@ -11,7 +11,7 @@
 
 @interface TRShareAddingRewardViewController : UIViewController
 
-@property (nonatomic, copy) id<TRShareAddingRewardDelegate> delegate;
+@property (nonatomic, retain) id<TRShareAddingRewardDelegate> delegate;
 
 - (IBAction)onClickFacebook:(id)sender;
 - (IBAction)onClickTwitter:(id)sender;
