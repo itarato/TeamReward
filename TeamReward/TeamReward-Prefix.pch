@@ -12,8 +12,7 @@
 
 #ifdef TR_ENVIRONMENT_DEVELOPMENT
 //#define kTRServerBasePath @"http://localhost/teamreward/teamreward/rest"
-//#define kTRServerBasePath @"http://192.168.1.102/teamreward/teamreward/rest"
-#define kTRServerBasePath @"http://192.168.1.15/teamreward/teamreward/rest"
+#define kTRServerBasePath @"http://192.168.1.21/teamreward/teamreward/rest"
 #elif
 #define kTRServerBasePath @"http://???/teamreward/teamreward/rest"
 #endif
@@ -33,6 +32,7 @@
 #define kTRServicePathNodeCreate @"/node"
 
 #define kTRNotificationDataRefresh @"tr_data_refresh"
+#define kTRNotificationOpenTabRewardCreation @"tr_open_tab_reward_creation"
 
 #define kTRDrupalLanguageUndefined @"und"
 

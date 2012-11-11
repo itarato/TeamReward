@@ -95,7 +95,7 @@
     
     // Configure the cell...
     TRNode *node = (TRNode *)[self.rewards objectAtIndex:[indexPath row]];
-    cell.senderName.text = node.sender_name ? node.sender_name : node.sender_mail;
+    cell.senderName.text = [NSString stringWithFormat:@"from %@", node.sender_name ? node.sender_name : node.sender_mail];
     cell.dateOfRewardField.text = [node shortCreatedDateFormat];
     cell.rewardMessageField.text = node.title;
     cell.rewardNode = node;
@@ -107,7 +107,7 @@
 #pragma mark UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 166.0f;
+    return 160.0f;
 }
 
 #pragma mark -

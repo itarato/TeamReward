@@ -12,5 +12,6 @@
 
 - (IBAction)onClickFacebook:(id)sender;
 - (IBAction)onClickTwitter:(id)sender;
+- (IBAction)onClickAddReward:(id)sender;
 
 @end

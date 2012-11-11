@@ -11,6 +11,8 @@
 
 @interface TRMainTabBarControllerViewController ()
 
+- (void)onNotifyChangeTabToRewardCreation;
+
 @end
 
 @implementation TRMainTabBarControllerViewController
@@ -20,6 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyChangeTabToRewardCreation) name:kTRNotificationOpenTabRewardCreation object:nil];
     }
     return self;
 }
@@ -40,6 +43,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Custom action
+
+- (void)onNotifyChangeTabToRewardCreation {
+    [self setSelectedIndex:0];
 }
 
 @end

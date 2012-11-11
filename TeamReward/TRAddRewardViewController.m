@@ -11,7 +11,7 @@
 #import <AddressBookUI/AddressBookUI.h>
 #import <QuartzCore/QuartzCore.h>
 
-#define kTRAddRewardDefaultNote @"Thank You note"
+#define kTRAddRewardDefaultNote @"Add your note here ..."
 
 @interface TRAddRewardViewController ()
 
