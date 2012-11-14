@@ -155,8 +155,12 @@
 #pragma mark RKObjectLoaderDelegate
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
-    NSLog(@"%s", __FUNCTION__);
-    if ([[objectLoader resourcePath] isEqualToString:kTRServicePathUserLogin]) {
+    NSLog(@"%s Error: %@ HTTP Status Code: %d", __FUNCTION__, [error localizedDescription], [[objectLoader response] statusCode]);
+    
+    if ([[objectLoader response] statusCode] == 406) { // HTTP status code for: Not Acceptable.
+        [self checkLoginState];
+    }
+    else if ([[objectLoader resourcePath] isEqualToString:kTRServicePathUserLogin]) {
         [self offerRegistration];
     }
 }
@@ -221,6 +225,9 @@
                                                             loader.additionalHTTPHeaders = [NSDictionary dictionaryWithKeysAndObjects:@"Content-Type", @"application/x-www-form-urlencoded", nil];
                                                         }];
     }
+//    else if (buttonIndex == kTRLoginAlertButtonTryLogin) {
+//        [self checkLoginState];
+//    }
 }
 
 @end

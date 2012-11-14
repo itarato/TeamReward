@@ -50,12 +50,15 @@
 		4772AE521641D71D00DCCF66 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4772AE511641D71D00DCCF66 /* Twitter.framework */; };
 		47780794164FF93A007668F0 /* card_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 47780792164FF93A007668F0 /* card_add.png */; };
 		47780795164FF93A007668F0 /* card_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47780793164FF93A007668F0 /* card_add@2x.png */; };
+		47780798164FFEA5007668F0 /* TRUserInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 47780797164FFEA5007668F0 /* TRUserInputValidator.m */; };
 		47950F22162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47950F20162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m */; };
 		47950F23162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47950F21162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib */; };
 		47950F26162AE2B8009CBDC5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47950F24162AE2B7009CBDC5 /* AddressBook.framework */; };
 		47950F27162AE2B8009CBDC5 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47950F25162AE2B7009CBDC5 /* AddressBookUI.framework */; };
 		47A5E5381634765200236DAA /* TRRewardFacebookShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5E5361634765200236DAA /* TRRewardFacebookShareViewController.m */; };
 		47A5E5391634765200236DAA /* TRRewardFacebookShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A5E5371634765200236DAA /* TRRewardFacebookShareViewController.xib */; };
+		47AB084D16517D6C008BFB0D /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 47AB084B16517D6C008BFB0D /* new.png */; };
+		47AB084E16517D6C008BFB0D /* new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47AB084C16517D6C008BFB0D /* new@2x.png */; };
 		47AB7C0A16404B9D00A74FC2 /* TRFacebookActionBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AB7C0916404B9D00A74FC2 /* TRFacebookActionBlock.m */; };
 		47B64435161C9AA9000F59FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64434161C9AA9000F59FD /* UIKit.framework */; };
 		47B64437161C9AA9000F59FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B64436161C9AA9000F59FD /* Foundation.framework */; };
@@ -218,6 +221,8 @@
 		4772AE511641D71D00DCCF66 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		47780792164FF93A007668F0 /* card_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card_add.png; path = ../../../Graphics/TeamReward/card_add.png; sourceTree = "<group>"; };
 		47780793164FF93A007668F0 /* card_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_add@2x.png"; path = "../../../Graphics/TeamReward/card_add@2x.png"; sourceTree = "<group>"; };
+		47780796164FFEA5007668F0 /* TRUserInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUserInputValidator.h; sourceTree = "<group>"; };
+		47780797164FFEA5007668F0 /* TRUserInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUserInputValidator.m; sourceTree = "<group>"; };
 		47950F1F162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNetworkIndicatorViewController.h; sourceTree = "<group>"; };
 		47950F20162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNetworkIndicatorViewController.m; sourceTree = "<group>"; };
 		47950F21162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRNetworkIndicatorViewController.xib; sourceTree = "<group>"; };
@@ -227,6 +232,8 @@
 		47A5E5351634765200236DAA /* TRRewardFacebookShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRewardFacebookShareViewController.h; sourceTree = "<group>"; };
 		47A5E5361634765200236DAA /* TRRewardFacebookShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRewardFacebookShareViewController.m; sourceTree = "<group>"; };
 		47A5E5371634765200236DAA /* TRRewardFacebookShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRRewardFacebookShareViewController.xib; sourceTree = "<group>"; };
+		47AB084B16517D6C008BFB0D /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = new.png; path = ../../../Graphics/TeamReward/new.png; sourceTree = "<group>"; };
+		47AB084C16517D6C008BFB0D /* new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new@2x.png"; path = "../../../Graphics/TeamReward/new@2x.png"; sourceTree = "<group>"; };
 		47AB7C0816404B9D00A74FC2 /* TRFacebookActionBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFacebookActionBlock.h; sourceTree = "<group>"; };
 		47AB7C0916404B9D00A74FC2 /* TRFacebookActionBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFacebookActionBlock.m; sourceTree = "<group>"; };
 		47B64430161C9AA9000F59FD /* TeamReward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamReward.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +414,8 @@
 				47B6448D161CA190000F59FD /* TRSettingsViewController.m */,
 				47150BB016459B2A00FFCB2A /* TRShareAddingRewardViewController.h */,
 				47150BB116459B2A00FFCB2A /* TRShareAddingRewardViewController.m */,
+				47780796164FFEA5007668F0 /* TRUserInputValidator.h */,
+				47780797164FFEA5007668F0 /* TRUserInputValidator.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -555,6 +564,8 @@
 				4722BF95164D769200EC159B /* spread@2x.png */,
 				47780792164FF93A007668F0 /* card_add.png */,
 				47780793164FF93A007668F0 /* card_add@2x.png */,
+				47AB084B16517D6C008BFB0D /* new.png */,
+				47AB084C16517D6C008BFB0D /* new@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -768,6 +779,8 @@
 				4722BFAB164D769200EC159B /* spread@2x.png in Resources */,
 				47780794164FF93A007668F0 /* card_add.png in Resources */,
 				47780795164FF93A007668F0 /* card_add@2x.png in Resources */,
+				47AB084D16517D6C008BFB0D /* new.png in Resources */,
+				47AB084E16517D6C008BFB0D /* new@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +837,7 @@
 				47AB7C0A16404B9D00A74FC2 /* TRFacebookActionBlock.m in Sources */,
 				4771E6AC1642CF16002322A3 /* UIColor+TRColorAddition.m in Sources */,
 				47150BB316459B2A00FFCB2A /* TRShareAddingRewardViewController.m in Sources */,
+				47780798164FFEA5007668F0 /* TRUserInputValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +900,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Arato (47C7V9BM96)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -907,6 +922,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PROVISIONING_PROFILE = "57A1A907-13F1-444C-B9BE-DE8BEC522919";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -917,6 +933,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Peter Arato (47C7V9BM96)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -932,6 +949,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PROVISIONING_PROFILE = "57A1A907-13F1-444C-B9BE-DE8BEC522919";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

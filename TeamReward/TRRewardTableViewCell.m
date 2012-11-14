@@ -19,6 +19,7 @@ static TRRewardTableViewCell *lastSwipedCell = nil;
 @synthesize rewardNode;
 @synthesize rewardMessageField;
 @synthesize dateOfRewardField;
+@synthesize badgeNewImageView;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];

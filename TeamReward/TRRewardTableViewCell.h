@@ -18,8 +18,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *dateOfRewardField;
 @property (nonatomic, retain) IBOutlet UIView *topView;
 @property (nonatomic, retain) TRNode *rewardNode;
-@property (nonatomic, retain) IBOutlet UIButton *facebookButton;
-@property (nonatomic, retain) IBOutlet UIButton *twitterButton;
+@property (nonatomic, retain) IBOutlet UIImageView *badgeNewImageView;
 
 @property (nonatomic, retain) id <TRRewardTableViewCellDelegate> delegate;
 
