@@ -100,6 +100,7 @@
     cell.rewardMessageField.text = node.title;
     cell.rewardNode = node;
     cell.delegate = self;
+    [cell.badgeNewImageView setHidden:![node isNew]];
     
     return cell;
 }

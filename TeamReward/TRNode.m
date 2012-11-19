@@ -32,4 +32,17 @@
     return [formatter stringFromDate:date];
 }
 
+- (BOOL)isNew {
+    NSDate *now = [[NSDate alloc] init];
+    NSTimeInterval now_seconds = [now timeIntervalSince1970];
+    
+    if (now_seconds - self.created_at < 86400) {
+        return YES;
+    }
+    
+    // @todo add case when the user haven't seen it.
+    
+    return NO;
+}
+
 @end

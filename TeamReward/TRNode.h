@@ -22,4 +22,6 @@
 
 - (NSString *)shortCreatedDateFormat;
 
+- (BOOL)isNew;
+
 @end

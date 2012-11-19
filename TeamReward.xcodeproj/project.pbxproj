@@ -100,7 +100,6 @@
 		47DC6531163C208A003250A5 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6528163C208A003250A5 /* grayArrow@2x.png */; };
 		47DC6532163C208A003250A5 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC6529163C208A003250A5 /* whiteArrow.png */; };
 		47DC6533163C208A003250A5 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC652A163C208A003250A5 /* whiteArrow@2x.png */; };
-		47E5601C161F4EC300B2CCB0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E5601B161F4EC300B2CCB0 /* Default-568h@2x.png */; };
 		47F68253162F1D1100014986 /* TRRewardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F68252162F1D1100014986 /* TRRewardTableViewCell.xib */; };
 		47F68256162F241E00014986 /* TRRewardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F68255162F241E00014986 /* TRRewardTableViewCell.m */; };
 		47F843931620729D0028F1D9 /* TRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F843921620729C0028F1D9 /* TRUser.m */; };
@@ -740,7 +739,6 @@
 				47B64495161CA2A5000F59FD /* 10-medical.png in Resources */,
 				47B64497161CA2B0000F59FD /* 44-shoebox.png in Resources */,
 				47B64499161CA2BC000F59FD /* 20-gear2.png in Resources */,
-				47E5601C161F4EC300B2CCB0 /* Default-568h@2x.png in Resources */,
 				47950F23162AB3B0009CBDC5 /* TRNetworkIndicatorViewController.xib in Resources */,
 				475BE15E162DD4ED0046F298 /* FacebookSDKResources.bundle in Resources */,
 				47F68253162F1D1100014986 /* TRRewardTableViewCell.xib in Resources */,

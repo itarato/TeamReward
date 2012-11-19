@@ -11,8 +11,8 @@
 #define TR_ENVIRONMENT_DEVELOPMENT
 
 #ifdef TR_ENVIRONMENT_DEVELOPMENT
-//#define kTRServerBasePath @"http://localhost/teamreward/teamreward/rest"
-#define kTRServerBasePath @"http://192.168.1.21/teamreward/teamreward/rest"
+#define kTRServerBasePath @"http://localhost/teamreward/teamreward/rest"
+//#define kTRServerBasePath @"http://192.168.1.21/teamreward/teamreward/rest"
 #elif
 #define kTRServerBasePath @"http://???/teamreward/teamreward/rest"
 #endif
