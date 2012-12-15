@@ -8,10 +8,13 @@
 
 #import "TRAddRewardViewController.h"
 #import "TRUser.h"
+#import "TRRewardFacebookShareViewController.h"
 #import <AddressBookUI/AddressBookUI.h>
 #import <QuartzCore/QuartzCore.h>
+#import <Twitter/Twitter.h>
 
 #define kTRAddRewardDefaultNote @"Add your note here ..."
+#define kTRAddRewardDefaultAfterShareMessage @"I've just sent a Thank You message"
 
 @interface TRAddRewardViewController ()
 
@@ -61,6 +64,16 @@
 #pragma mark Custom actions
 
 - (void)onClickSend:(id)sender {
+    if ([self.emailField.text length] == 0) {
+        [[[UIAlertView alloc] initWithTitle:@"Missing recipient" message:@"Didn't you miss somebody? An email? :)" delegate:nil cancelButtonTitle:@"Oh yeah" otherButtonTitles:nil] show];
+        return;
+    }
+    
+    if ([self.rewardTextField.text isEqualToString:kTRAddRewardDefaultNote] || [self.rewardTextField.text length] == 0) {
+        [[[UIAlertView alloc] initWithTitle:@"Missing note" message:@"You sure? No note? Just a little, please ;)" delegate:nil cancelButtonTitle:@"All right" otherButtonTitles:nil] show];
+        return;
+    }
+    
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:kTRServicePathNodeCreate usingBlock:^(RKObjectLoader *loader) {
         loader.method = RKRequestMethodPOST;
         loader.additionalHTTPHeaders = [NSDictionary dictionaryWithKeysAndObjects:@"Content-Type", @"application/x-www-form-urlencoded", nil];
@@ -69,7 +82,7 @@
                          @"type", @"reward",
                          @"uid", [[TRUser activeUser] uid],
                          @"title", [self.rewardTextField text],
-                         @"field_reward_recipient_email[und][0][value]", [self.emailField text],
+                         @"field_reward_recipient_email[und][0][value]", self.emailField.text,
                          @"language", kTRDrupalLanguageUndefined,
                          nil];
     }];
@@ -154,11 +167,13 @@
 #pragma mark - TRShareAddingRewardDelegate
 
 - (void)shareAddingRewardDidHitFacebook {
-    
+    [TRRewardFacebookShareViewController openSharingViewControllerOn:self withText:kTRAddRewardDefaultAfterShareMessage];
 }
 
 - (void)shareAddingRewardDidHitTwitter {
-    
+    TWTweetComposeViewController *tweetComposer = [[TWTweetComposeViewController alloc] init];
+    [tweetComposer setInitialText:kTRAddRewardDefaultAfterShareMessage];
+    [self presentModalViewController:tweetComposer animated:YES];
 }
 
 - (void)shareAddingRewardDidHitClose {
